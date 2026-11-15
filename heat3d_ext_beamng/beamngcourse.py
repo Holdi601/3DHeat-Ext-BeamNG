@@ -1357,7 +1357,7 @@ def export(driven, target: Path, args, *, install: Path | None = None) -> int:
             "with --install (the one holding gameengine.zip).",
             file=sys.stderr,
         )
-        return 1
+        return 2
     files = Files.of_install(game)
     route = from_viewer(driven.positions)
     name = getattr(args, "level", None)
@@ -1371,14 +1371,15 @@ def export(driven, target: Path, args, *, install: Path | None = None) -> int:
                 + ". Name the level with --level.",
                 file=sys.stderr,
             )
-            return 1
+            return 2
         name = matches[0].level
         print(f"  on {name}: {matches[0].score:.0%} of the lap lies on its {matches[0].by}")
     try:
         level = open_level(files, name)
     except BeamNGError as exc:
+        # No such level, or one this install cannot open: nothing to export from.
         print(exc, file=sys.stderr)
-        return 1
+        return 2
     materials = Materials(files, level.name)
     textures = Textures(files)
     corridor = Corridor(plane(route), args.margin)

@@ -71,7 +71,8 @@ heat3d-beamng-maps course my_lap.json --install "D:\Games\BeamNG.drive" --no-tex
 | `--track`, `--season` | Forza only: accepted, so 3DHeat GameFiles can pass its arguments on unchanged, and ignored |
 
 Exit status: 0 done; 1 reading or writing failed; 2 nothing found - no
-BeamNG.drive install, not a BeamNG lap or file, GameFiles missing (the message
+BeamNG.drive install, no such level, a lap on no installed level, not a BeamNG lap or
+file, GameFiles missing (the message
 says which, and what to do). Every option, as the program prints it:
 [Command reference](https://holdi601.github.io/3DHeat-Ext-BeamNG/cli-reference.html).
 
