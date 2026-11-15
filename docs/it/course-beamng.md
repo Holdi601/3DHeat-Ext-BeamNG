@@ -3,7 +3,7 @@ title: BeamNG.drive
 nav_order: 2
 lang: "it"
 source: course-beamng.md
-source_hash: "20b6c04360dc"
+source_hash: "1d9100dea4ce"
 nav_exclude: true
 search_exclude: true
 ---
@@ -15,16 +15,16 @@ di 512 m con una texture cotta, strada e terreno sciolto come parti proprie, mod
 collocati per categoria, e l'acqua.
 
 ```
-python -m heat3d_gamefiles course beamng_lap.json
-python -m heat3d_gamefiles course beamng_lap.json --level <cartella del livello>
-python -m heat3d_gamefiles course beamng_lap.json --install "D:\Games\BeamNG.drive"
-python -m heat3d_gamefiles course lap.csv --game beamng
+heat3d-beamng-maps course beamng_lap.json
+heat3d-beamng-maps course beamng_lap.json --level <cartella del livello>
+heat3d-beamng-maps course beamng_lap.json --install "D:\Games\BeamNG.drive"
+heat3d-beamng-maps course lap.csv --game beamng
 ```
 
-Fonti: [`beamng.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamng.py) (installazione, file system, scena, terreno, materiali),
-[`beamngcourse.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngcourse.py) (l'esportazione),
-[`beamngshape.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngshape.py) e
-[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngcollada.py) (forme).
+Fonti: [`beamng.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamng.py) (installazione, file system, scena, terreno, materiali),
+[`beamngcourse.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngcourse.py) (l'esportazione),
+[`beamngshape.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngshape.py) e
+[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngcollada.py) (forme).
 Formati dei file in dettaglio: [File di BeamNG](reader-beamng.md).
 
 ## Il sistema di riferimento del giro {#the-laps-frame}
@@ -116,7 +116,7 @@ Di cosa è fatto un livello, ogni parte controllata sui livelli distribuiti
 ## Il corridoio e i decal delle strade {#the-corridor-and-the-road-decals}
 
 Il corridoio è `--margin` metri attorno al giro, nel piano x/y di BeamNG (vedi
-[Esportazione del percorso](course-export.md#the-corridor)). Un corridoio di
+[Esportazione del percorso](https://holdi601.github.io/3DHeat-GameFiles/it/course-export.html#the-corridor)). Un corridoio di
 portata di `margin + 60 m` seleziona i candidati.
 
 **I decal stradali** (`DecalRoad`) sono dove si trova gran parte delle strade di
@@ -252,7 +252,7 @@ disegnato con il colore medio della texture (ponderato per alfa, in sRGB, moltip
 per la tinta del materiale), oppure con il colore della categoria se non ha texture.
 
 **Dettaglio.** Segue lo schema comune descritto in
-[Livelli di dettaglio e budget](detail-budget.md). I livelli di dettaglio di BeamNG
+[Livelli di dettaglio e budget](https://holdi601.github.io/3DHeat-GameFiles/it/detail-budget.html). I livelli di dettaglio di BeamNG
 sono i `details` della forma (dimensione in pixel più grande per prima). Sopra il
 budget, prima vanno le copie più lontane. Cordoli e modelli che portano superficie
 di guida non vengono mai semplificati o lasciati fuori.

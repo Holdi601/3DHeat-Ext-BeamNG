@@ -54,9 +54,9 @@ from .beamng import (
     terrain_blocks,
 )
 from .beamngshape import Shape, UnreadableShape, read_shape
-from .corridor import Corridor
-from .glb import Part, compute_normals, write_glb
-from .surfaces import BY_KEY, WATER, part_name
+from heat3d_gamefiles.corridor import Corridor
+from heat3d_gamefiles.glb import Part, compute_normals, write_glb
+from heat3d_gamefiles.surfaces import BY_KEY, WATER, part_name
 
 #: Metres a baked ground texture covers, as for Forza.
 TILE = 512.0
@@ -1229,7 +1229,7 @@ def _drawn_levels(shape) -> list[int]:
 
 def _choose_levels(chosen, shapes, materials: Materials, route: np.ndarray, budget: int | None, out) -> dict[int, int]:
     """The detail level each chosen copy is drawn at, by its index; absent if left out."""
-    from .detail import FAR, NEAR, auto_budget, choose_levels, route_distance
+    from heat3d_gamefiles.detail import FAR, NEAR, auto_budget, choose_levels, route_distance
 
     if not chosen:
         return {}

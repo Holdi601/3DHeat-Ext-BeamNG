@@ -3,7 +3,7 @@ title: BeamNG-bestanden
 nav_order: 8
 lang: "nl"
 source: reader-beamng.md
-source_hash: "6f7a0239e385"
+source_hash: "c782ef4cb1e7"
 nav_exclude: true
 search_exclude: true
 ---
@@ -11,9 +11,9 @@ search_exclude: true
 
 BeamNG.drive levert gewone zip-archieven, dus er is geen container om te reverse-engineeren. Het werk zit in het lezen van een level **zoals het spel dat doet**: de archieven in één bestandssysteem koppelen, de scènebestanden volgen, en het terrein en de gecompileerde vormen decoderen. Deze lezers worden bereikt via de baan-export van [BeamNG.drive](course-beamng.md). `identify` herkent ook een levelzip, een `.cdae` en een `.ter`, en `list` en `extract` nemen elke zip.
 
-Bronnen: [`beamng.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamng.py),
-[`beamngshape.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngshape.py),
-[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngcollada.py).
+Bronnen: [`beamng.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamng.py),
+[`beamngshape.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngshape.py),
+[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngcollada.py).
 
 ## Het gekoppelde bestandssysteem {#the-mounted-file-system}
 

@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "heat3d-ext-beamng"
+version = "0.1.0"
+description = "BeamNG.drive levels from your own install as 3DHeat courses: the ground, roads, placed models and water around a recorded lap"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+dependencies = [
+    "heat3d-gamefiles @ git+https://github.com/Holdi601/3DHeat-GameFiles.git@v1.1.0",
+    "numpy>=2.0",
+    "Pillow>=10.0",
+    "msgpack>=1.0",
+    "zstandard>=0.22",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.0"]
+
+[project.scripts]
+heat3d-beamng-maps = "heat3d_ext_beamng.cli:main"
+
+[tool.setuptools]
+packages = ["heat3d_ext_beamng", "heat3d_update"]

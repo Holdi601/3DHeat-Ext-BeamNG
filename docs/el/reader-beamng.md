@@ -3,7 +3,7 @@ title: "Αρχεία BeamNG"
 nav_order: 8
 lang: "el"
 source: reader-beamng.md
-source_hash: "6f7a0239e385"
+source_hash: "c782ef4cb1e7"
 nav_exclude: true
 search_exclude: true
 ---
@@ -11,9 +11,9 @@ search_exclude: true
 
 Το BeamNG.drive κυκλοφορεί απλά αρχεία zip, οπότε δεν υπάρχει container για αντίστροφη μηχανική. Η δουλειά είναι στο να διαβαστεί ένα επίπεδο **με τον τρόπο που το διαβάζει το ίδιο το παιχνίδι**: τοποθέτηση των αρχείων σε ένα ενιαίο σύστημα αρχείων, ακολούθηση των αρχείων σκηνής, και αποκωδικοποίηση του εδάφους και των συμπιεσμένων σχημάτων. Σε αυτούς τους αναγνώστες φτάνει κανείς μέσω της εξαγωγής διαδρομής του [BeamNG.drive](course-beamng.md). Το `identify` αναγνωρίζει επίσης ένα zip επιπέδου, ένα `.cdae` και ένα `.ter`, και τα `list` και `extract` δέχονται οποιοδήποτε από τα zip.
 
-Πηγές: [`beamng.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamng.py),
-[`beamngshape.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngshape.py),
-[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngcollada.py).
+Πηγές: [`beamng.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamng.py),
+[`beamngshape.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngshape.py),
+[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngcollada.py).
 
 ## Το συνδεδεμένο σύστημα αρχείων {#the-mounted-file-system}
 

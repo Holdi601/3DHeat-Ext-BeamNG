@@ -3,7 +3,7 @@ title: BeamNG.drive
 nav_order: 2
 lang: "ro"
 source: course-beamng.md
-source_hash: "20b6c04360dc"
+source_hash: "1d9100dea4ce"
 nav_exclude: true
 search_exclude: true
 ---
@@ -12,16 +12,16 @@ search_exclude: true
 Exportul BeamNG citește un nivel în felul în care îl montează jocul, apoi scrie același fel de fișier ca exportul Forza: terenul pe pătrate de 512 m, cu o textură coaptă, drumul și solul liber ca părți proprii, modelele plasate pe categorii și apa.
 
 ```
-python -m heat3d_gamefiles course beamng_lap.json
-python -m heat3d_gamefiles course beamng_lap.json --level <level folder>
-python -m heat3d_gamefiles course beamng_lap.json --install "D:\Games\BeamNG.drive"
-python -m heat3d_gamefiles course lap.csv --game beamng
+heat3d-beamng-maps course beamng_lap.json
+heat3d-beamng-maps course beamng_lap.json --level <level folder>
+heat3d-beamng-maps course beamng_lap.json --install "D:\Games\BeamNG.drive"
+heat3d-beamng-maps course lap.csv --game beamng
 ```
 
-Surse: [`beamng.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamng.py) (instalare, sistem de fișiere, scenă, teren, materiale),
-[`beamngcourse.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngcourse.py) (exportul),
-[`beamngshape.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngshape.py) și
-[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngcollada.py) (forme).
+Surse: [`beamng.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamng.py) (instalare, sistem de fișiere, scenă, teren, materiale),
+[`beamngcourse.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngcourse.py) (exportul),
+[`beamngshape.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngshape.py) și
+[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngcollada.py) (forme).
 Formatele de fișiere în detaliu: [Fișierele BeamNG](reader-beamng.md).
 
 ## Cadrul turului {#the-laps-frame}
@@ -71,7 +71,7 @@ Din ce este făcut un nivel, fiecare parte verificată pe nivelurile livrate (de
 
 ## Coridorul și decalcurile de drum {#the-corridor-and-the-road-decals}
 
-Coridorul este `--margin` metri în jurul turului, în planul x/y al BeamNG (vedeți [Exportul traseului](course-export.md#the-corridor)). Un coridor de atingere de `margin + 60 m` alege candidații.
+Coridorul este `--margin` metri în jurul turului, în planul x/y al BeamNG (vedeți [Exportul traseului](https://holdi601.github.io/3DHeat-GameFiles/ro/course-export.html#the-corridor)). Un coridor de atingere de `margin + 60 m` alege candidații.
 
 **Decalcurile de drum** (`DecalRoad`) sunt unde se află cea mai mare parte a drumurilor BeamNG: pictate pe teren, nu modelate. Decalcurile a căror extindere atinge coridorul de atingere se iau în ordinea de desenare a jocului (`renderPriority` descrescător, apoi ordinea din fișier), și se așază ca panglici:
 
@@ -152,7 +152,7 @@ Candidații sunt fiecare `TSStatic`, copil de prefab și element de pădure a c�
 
 **Texturi.** Modelele se grupează pe categorie și material în părți numite `structure:<category> <material>` (sau `ground:kerbs <material>`). Un grup primește textura de culoare a materialului său, de până la **256 px**, doar dacă coordonatele lui UV rămân între 0 și 1 (98% din vârfuri între -0,02 și 1,02). Vizualizatorul împachetează texturile într-un atlas și nu poate repeta una. Un grup a cărui textură se repetă se desenează în culoarea medie a texturii (ponderată cu alfa, în sRGB, înmulțită cu nuanța materialului), sau în culoarea categoriei dacă nu are textură.
 
-**Detaliul** urmează schema comună din [Nivelurile de detaliu și bugetul](detail-budget.md). Nivelurile de detaliu ale BeamNG sunt `details` ale formei (cel mai mare pixel-size primul). Peste buget, copiile cele mai îndepărtate pleacă primele. Bordurile și modelele care poartă suprafață de rulare nu se simplifică și nu se lasă afară niciodată.
+**Detaliul** urmează schema comună din [Nivelurile de detaliu și bugetul](https://holdi601.github.io/3DHeat-GameFiles/ro/detail-budget.html). Nivelurile de detaliu ale BeamNG sunt `details` ale formei (cel mai mare pixel-size primul). Peste buget, copiile cele mai îndepărtate pleacă primele. Bordurile și modelele care poartă suprafață de rulare nu se simplifică și nu se lasă afară niciodată.
 
 `--no-placed` scoate structurile, dar păstrează suprafața de rulare modelată. `--trees` adaugă categoria copacilor.
 

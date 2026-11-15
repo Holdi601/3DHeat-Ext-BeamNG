@@ -1,6 +1,5 @@
 ---
 title: BeamNG files
-parent: Archive readers
 nav_order: 8
 ---
 
@@ -13,9 +12,9 @@ terrain and the compiled shapes. These readers are reached through the
 [BeamNG.drive](course-beamng.md) course export. `identify` also names a level
 zip, a `.cdae` and a `.ter`, and `list` and `extract` take any of the zips.
 
-Sources: [`beamng.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamng.py),
-[`beamngshape.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngshape.py),
-[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngcollada.py).
+Sources: [`beamng.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamng.py),
+[`beamngshape.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngshape.py),
+[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngcollada.py).
 
 ## The mounted file system
 

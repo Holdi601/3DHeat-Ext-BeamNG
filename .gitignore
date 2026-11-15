@@ -1,0 +1,31 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+.venv/
+
+# Courses built from a user's own game files, the game's own files, and laps
+# recorded in it never belong here.
+*.glb
+*.gltf
+*.zip
+*.cdae
+*.dae
+*.ter
+*.dds
+*.png
+*.jpg
+*.jpeg
+*.prefab
+*.forest4.json
+*.level.json
+*.lap.json
+*.csv
+*.parquet
+courses/
+laps/
+.claude/
+*.jsonl
+*.log

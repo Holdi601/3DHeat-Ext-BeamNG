@@ -3,7 +3,7 @@ title: "BeamNG.drive"
 nav_order: 2
 lang: "cs"
 source: course-beamng.md
-source_hash: "20b6c04360dc"
+source_hash: "1d9100dea4ce"
 nav_exclude: true
 search_exclude: true
 ---
@@ -12,16 +12,16 @@ search_exclude: true
 Export BeamNG čte úroveň tak, jak ji hra připojuje, a pak zapíše stejný druh souboru jako export Forzy: zemi po čtvercích 512 m se zapečenou texturou, silnici a volnou zem jako samostatné části, umístěné modely podle kategorií a vodu.
 
 ```
-python -m heat3d_gamefiles course beamng_lap.json
-python -m heat3d_gamefiles course beamng_lap.json --level <level folder>
-python -m heat3d_gamefiles course beamng_lap.json --install "D:\Games\BeamNG.drive"
-python -m heat3d_gamefiles course lap.csv --game beamng
+heat3d-beamng-maps course beamng_lap.json
+heat3d-beamng-maps course beamng_lap.json --level <level folder>
+heat3d-beamng-maps course beamng_lap.json --install "D:\Games\BeamNG.drive"
+heat3d-beamng-maps course lap.csv --game beamng
 ```
 
-Zdroje: [`beamng.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamng.py) (instalace, souborový systém, scéna, terén, materiály),
-[`beamngcourse.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngcourse.py) (export),
-[`beamngshape.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngshape.py) a
-[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngcollada.py) (tvary).
+Zdroje: [`beamng.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamng.py) (instalace, souborový systém, scéna, terén, materiály),
+[`beamngcourse.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngcourse.py) (export),
+[`beamngshape.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngshape.py) a
+[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngcollada.py) (tvary).
 Formáty souborů podrobně: [Soubory BeamNG](reader-beamng.md).
 
 ## Rámec kola {#the-laps-frame}
@@ -70,7 +70,7 @@ Z čeho se úroveň skládá, každá část ověřená proti dodaným úrovním
 
 ## Koridor a silniční dekály {#the-corridor-and-the-road-decals}
 
-Koridor je `--margin` metrů kolem kola v rovině x/y BeamNG (viz [Export tratě](course-export.md#the-corridor)). Koridor dosahu `margin + 60 m` vybere kandidáty.
+Koridor je `--margin` metrů kolem kola v rovině x/y BeamNG (viz [Export tratě](https://holdi601.github.io/3DHeat-GameFiles/cs/course-export.html#the-corridor)). Koridor dosahu `margin + 60 m` vybere kandidáty.
 
 **Silniční dekály** (`DecalRoad`) tvoří většinu silnic BeamNG: jsou namalované na terénu, ne modelované. Dekály, jejichž rozsah se dotýká koridoru dosahu, se vezmou v pořadí kreslení hry (sestupně `renderPriority`, pak pořadí v souboru) a rozloží se jako pásy:
 
@@ -151,7 +151,7 @@ Kandidáti jsou všechny `TSStatic`, potomci prefabů a lesní položky, jejich�
 
 **Textury.** Modely se seskupují podle kategorie a materiálu do částí pojmenovaných `structure:<category> <material>` (nebo `ground:kerbs <material>`). Skupina dostane barevnou texturu svého materiálu nejvýš na **256 px**, jen pokud její UV zůstávají v 0-1 (98 % vrcholů v rozsahu -0.02 až 1.02). Prohlížeč balí textury do atlasu a jednu nemůže opakovat. Skupina, jejíž textura se opakuje, se kreslí v průměrné barvě textury (vážené alfou, v sRGB, krát odstín materiálu), nebo v barvě kategorie, pokud nemá texturu.
 
-**Detail** se řídí sdíleným schématem v [Úrovně detailu a rozpočet](detail-budget.md). Úrovně detailu BeamNG jsou `details` tvaru (nejdřív největší velikost v pixelech). Nad rozpočtem jdou první nejvzdálenější kopie. Obrubníky a modely nesoucí povrch jízdy se nikdy nezjednodušují ani nevynechávají.
+**Detail** se řídí sdíleným schématem v [Úrovně detailu a rozpočet](https://holdi601.github.io/3DHeat-GameFiles/cs/detail-budget.html). Úrovně detailu BeamNG jsou `details` tvaru (nejdřív největší velikost v pixelech). Nad rozpočtem jdou první nejvzdálenější kopie. Obrubníky a modely nesoucí povrch jízdy se nikdy nezjednodušují ani nevynechávají.
 
 `--no-placed` zahodí konstrukce, ale ponechá modelovaný povrch jízdy. `--trees` přidá kategorii stromů.
 

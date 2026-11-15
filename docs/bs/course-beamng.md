@@ -3,7 +3,7 @@ title: "BeamNG.drive"
 nav_order: 2
 lang: "bs"
 source: course-beamng.md
-source_hash: "20b6c04360dc"
+source_hash: "1d9100dea4ce"
 nav_exclude: true
 search_exclude: true
 ---
@@ -15,16 +15,16 @@ rastresito tlo kao zasebne dijelove, postavljene modele po kategorijama i
 vodu.
 
 ```
-python -m heat3d_gamefiles course beamng_lap.json
-python -m heat3d_gamefiles course beamng_lap.json --level <level folder>
-python -m heat3d_gamefiles course beamng_lap.json --install "D:\Games\BeamNG.drive"
-python -m heat3d_gamefiles course lap.csv --game beamng
+heat3d-beamng-maps course beamng_lap.json
+heat3d-beamng-maps course beamng_lap.json --level <level folder>
+heat3d-beamng-maps course beamng_lap.json --install "D:\Games\BeamNG.drive"
+heat3d-beamng-maps course lap.csv --game beamng
 ```
 
-Izvori: [`beamng.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamng.py) (instalacija, datotečni sistem, scena, teren, materijali),
-[`beamngcourse.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngcourse.py) (izvoz),
-[`beamngshape.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngshape.py) i
-[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngcollada.py) (oblici).
+Izvori: [`beamng.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamng.py) (instalacija, datotečni sistem, scena, teren, materijali),
+[`beamngcourse.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngcourse.py) (izvoz),
+[`beamngshape.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngshape.py) i
+[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngcollada.py) (oblici).
 Formati datoteka detaljno: [BeamNG datoteke](reader-beamng.md).
 
 ## Koordinatni okvir kruga {#the-laps-frame}
@@ -111,7 +111,7 @@ Od čega se nivo sastoji, svaki dio provjeren prema isporučenim nivoima
 ## Koridor i dekali cesta {#the-corridor-and-the-road-decals}
 
 Koridor je `--margin` metara oko kruga u BeamNG-ovoj x/y ravni (pogledajte
-[Izvoz staze](course-export.md#the-corridor)). Koridor dosega od
+[Izvoz staze](https://holdi601.github.io/3DHeat-GameFiles/bs/course-export.html#the-corridor)). Koridor dosega od
 `margin + 60 m` bira kandidate.
 
 **Dekali cesta** (`DecalRoad`) su mjesto gdje je većina BeamNG-ovih cesta: oslikani na
@@ -242,7 +242,7 @@ boji teksture (otežanoj alfom, u sRGB, puta nijansa materijala), ili u
 boji kategorije ako nema teksturu.
 
 **Detalj** slijedi zajedničku šemu na
-[Nivoi detalja i budžet](detail-budget.md). BeamNG-ovi nivoi detalja su
+[Nivoi detalja i budžet](https://holdi601.github.io/3DHeat-GameFiles/bs/detail-budget.html). BeamNG-ovi nivoi detalja su
 `details` oblika (prvo najveća veličina u pikselima). Preko budžeta, najudaljenije
 kopije idu prve. Ivičnjaci i modeli koji nose površinu za vožnju nikad se ne pojednostavljuju
 niti izostavljaju.

@@ -3,7 +3,7 @@ title: "BeamNG.drive"
 nav_order: 2
 lang: "nl"
 source: course-beamng.md
-source_hash: "20b6c04360dc"
+source_hash: "1d9100dea4ce"
 nav_exclude: true
 search_exclude: true
 ---
@@ -14,16 +14,16 @@ bestand als de Forza-export: grond per vierkant van 512 m met een ingebakken tex
 losse grond als eigen delen, geplaatste modellen per categorie, en water.
 
 ```
-python -m heat3d_gamefiles course beamng_lap.json
-python -m heat3d_gamefiles course beamng_lap.json --level <level folder>
-python -m heat3d_gamefiles course beamng_lap.json --install "D:\Games\BeamNG.drive"
-python -m heat3d_gamefiles course lap.csv --game beamng
+heat3d-beamng-maps course beamng_lap.json
+heat3d-beamng-maps course beamng_lap.json --level <level folder>
+heat3d-beamng-maps course beamng_lap.json --install "D:\Games\BeamNG.drive"
+heat3d-beamng-maps course lap.csv --game beamng
 ```
 
-Bronnen: [`beamng.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamng.py) (installatie, bestandssysteem, scène, terrein, materialen),
-[`beamngcourse.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngcourse.py) (de export),
-[`beamngshape.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngshape.py) en
-[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngcollada.py) (vormen).
+Bronnen: [`beamng.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamng.py) (installatie, bestandssysteem, scène, terrein, materialen),
+[`beamngcourse.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngcourse.py) (de export),
+[`beamngshape.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngshape.py) en
+[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngcollada.py) (vormen).
 Bestandsformaten in detail: [BeamNG-bestanden](reader-beamng.md).
 
 ## Het kader van de ronde {#the-lap-s-frame}
@@ -105,7 +105,7 @@ Waaruit een level bestaat, elk onderdeel gecontroleerd tegen de meegeleverde lev
 ## De corridor en de wegdecals {#the-corridor-and-the-road-decals}
 
 De corridor is `--margin` meter rond de ronde in het x/y-vlak van BeamNG (zie
-[Baanexport](course-export.md#the-corridor)). Een bereikcorridor van `margin + 60 m` kiest de
+[Baanexport](https://holdi601.github.io/3DHeat-GameFiles/nl/course-export.html#the-corridor)). Een bereikcorridor van `margin + 60 m` kiest de
 kandidaten.
 
 **Wegdecals** (`DecalRoad`) vormen het grootste deel van de wegen van BeamNG: ze zijn op het
@@ -228,7 +228,7 @@ vertices binnen -0,02 tot 1,02). De viewer pakt texturen in een atlas en kan er 
 groep waarvan de textuur zich herhaalt, wordt getekend in de gemiddelde kleur van de textuur
 (alfagewogen, in sRGB, maal de materiaaltint), of in de categoriekleur als er geen textuur is.
 
-**Detail** volgt het gedeelde schema op [Detailniveaus en het budget](detail-budget.md). De
+**Detail** volgt het gedeelde schema op [Detailniveaus en het budget](https://holdi601.github.io/3DHeat-GameFiles/nl/detail-budget.html). De
 detailniveaus van BeamNG zijn de `details` van de vorm (eerst de grootste pixelgrootte). Boven het
 budget gaan de verste kopieën eerst. Stoepranden en modellen die rijoppervlak dragen, worden nooit
 vereenvoudigd of weggelaten.

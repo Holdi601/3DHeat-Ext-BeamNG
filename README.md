@@ -1,0 +1,111 @@
+# 3DHeat BeamNG: BeamNG.drive courses around your laps
+
+**What is it?** This tool reads a BeamNG.drive level from your own install and
+cuts out the stretch you drove: the ground with its baked texture, the roads,
+kerbs, barriers, signs, buildings and water along your lap, as one 3D course
+for the [3DHeat](https://github.com/Holdi601/3DHeat) viewer.
+
+**Why would I use it?** To analyse your BeamNG laps on the real road - braking
+points, lines and corners in 3D - instead of on a line in empty space.
+
+**Example:** `heat3d-beamng-maps course my_lap.json` -> `my_lap.glb`, in the
+lap's own frame: it drops into the viewer's Race tab under the lap.
+
+**Documentation:** [holdi601.github.io/3DHeat-Ext-BeamNG](https://holdi601.github.io/3DHeat-Ext-BeamNG/), a page per
+command with step-by-step use and example output. Part of
+[3DHeat](https://github.com/Holdi601/3DHeat) ([documentation](https://holdi601.github.io/3DHeat/)).
+
+This tool is kept outside the 3DHeat tools on purpose: it reads BeamNG GmbH's
+game files. If it ever has to go, nothing else goes with it. The courses it
+writes stay on your machine.
+
+## Install
+
+New to the command line? Read [Before you start](https://holdi601.github.io/3DHeat-Ext-BeamNG/before-you-start.html) first.
+
+1. Install Python 3.10 or later, and BeamNG.drive.
+2. `git clone https://github.com/Holdi601/3DHeat-Ext-BeamNG` (or download the
+   ZIP) and open a terminal in that folder.
+3. Install the command - this also installs
+   [3DHeat GameFiles](https://github.com/Holdi601/3DHeat-GameFiles), the library
+   the readers build on - and check that the game is found:
+
+```bash
+python -m pip install -e .        # installs the heat3d-beamng-maps command
+heat3d-beamng-maps levels         # where BeamNG.drive is, and its levels
+```
+
+Without pip, a GameFiles checkout is found in `HEAT3D_GAMEFILES`, in
+`../../gamefiles` (inside a 3DHeat checkout) or in `../3DHeat-GameFiles`.
+
+Laps come from the 3DHeat GameCapture recorder and its BeamNG mod
+([Telemetry: BeamNG.drive](https://holdi601.github.io/3DHeat-GameCapture/telemetry-beamng.html),
+code in [GameCapture's `mods/beamng`](https://github.com/Holdi601/3DHeat-GameCapture/tree/main/mods/beamng)).
+
+## Commands
+
+| Command | Does | Page |
+|---|---|---|
+| `course <lap> [-o file.glb]` | the ground, roads, models and water around a BeamNG lap, the level found from the lap | [course](https://holdi601.github.io/3DHeat-Ext-BeamNG/course-beamng.html) |
+| `levels [--install FOLDER]` | where BeamNG.drive is, and every level it has (mods included) | [levels](https://holdi601.github.io/3DHeat-Ext-BeamNG/levels.html) |
+| `identify <path>` | whether a file is a BeamNG `.cdae` shape, `.ter` terrain or level zip, and what it holds | [identify](https://holdi601.github.io/3DHeat-Ext-BeamNG/identify.html) |
+
+```bash
+heat3d-beamng-maps course laps\my_lap.json                        # the level found from the lap
+heat3d-beamng-maps course my_lap.json --level <level folder>      # or named
+heat3d-beamng-maps course my_lap.json --install "D:\Games\BeamNG.drive" --no-textures
+```
+
+| `course` option | Does |
+|---|---|
+| `-o`, `--out FILE` | the `.glb` to write (default: the lap's name, in `$HEAT3D_LEVELS/beamng/courses` when that is set, else here) |
+| `--level NAME` | the level's folder name, when it should not be found from the lap |
+| `--install FOLDER` | the game's folder (holding `gameengine.zip`), when it is in no Steam library |
+| `--margin METRES` | ground kept either side of the driving (default 80) |
+| `--texture-size {2048,1024,512}` | baked ground texture per 512 m square (default 2048, 25 cm a pixel) |
+| `--no-textures` | flat colours only |
+| `--no-placed` | terrain and modelled road only |
+| `--trees` | also trees and bushes |
+| `--detail-budget N` | a ceiling on placed triangles |
+| `--game {forza,beamng,acrally}` | which game the lap is from (default: what the lap says, else BeamNG); another game's lap exits 2 and names its tool |
+| `--track`, `--season` | Forza only: accepted, so 3DHeat GameFiles can pass its arguments on unchanged, and ignored |
+
+Exit status: 0 done; 1 reading or writing failed; 2 nothing found - no
+BeamNG.drive install, not a BeamNG lap or file, GameFiles missing (the message
+says which, and what to do). Every option, as the program prints it:
+[Command reference](https://holdi601.github.io/3DHeat-Ext-BeamNG/cli-reference.html).
+
+3DHeat GameFiles' `course` runs this tool for a BeamNG lap, and its `identify`
+asks this tool about files its own readers do not know.
+
+## What comes out, and loading it
+
+One glTF binary in the viewer's frame (metres, Y up): ground per 512 m square
+with a baked texture (`ground:terrain`, `ground:road`, ...), placed models per
+category and material (`structure:barriers <material>`, `ground:kerbs <material>`, ...)
+and `water:water`. Load it in the viewer's **Background / level** panel with
+**3D model…** under the lap.
+[The course, step by step](https://holdi601.github.io/3DHeat-Ext-BeamNG/course-beamng.html).
+
+## Terms
+
+BeamNG.drive and its levels belong to BeamNG GmbH, who do not endorse this
+project. Nothing of the game is in this repository or downloaded by it; the
+level comes out of your own install, and the course it writes is yours to
+analyse your laps on, not to share
+([Terms and licence](https://holdi601.github.io/3DHeat-Ext-BeamNG/terms.html)).
+
+## Tests
+
+```bash
+python -m pip install -e .[test]
+python -m pytest
+```
+
+On made-up data only: an install built the way the game ships one. The tests
+on the real game run only where BeamNG.drive is installed, and write nothing
+into the repository.
+
+## Licence
+
+MIT ([`LICENSE`](LICENSE)). Third-party software it uses: [`LICENSES.md`](LICENSES.md).

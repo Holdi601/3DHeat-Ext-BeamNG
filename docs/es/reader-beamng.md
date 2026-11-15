@@ -3,7 +3,7 @@ title: Archivos de BeamNG
 nav_order: 8
 lang: "es"
 source: reader-beamng.md
-source_hash: "6f7a0239e385"
+source_hash: "c782ef4cb1e7"
 nav_exclude: true
 search_exclude: true
 ---
@@ -11,9 +11,9 @@ search_exclude: true
 
 BeamNG.drive distribuye archivos zip normales, así que no hay contenedor que haga falta ingeniar en sentido inverso. El trabajo está en leer un nivel **como lo hace el juego**: montar los archivos en un único sistema de archivos, seguir los archivos de escena, y decodificar el terreno y las formas compiladas. Se llega a estos lectores a través de la exportación de circuito de [BeamNG.drive](course-beamng.md). `identify` también reconoce un zip de nivel, un `.cdae` y un `.ter`, y `list` y `extract` aceptan cualquiera de los zip.
 
-Fuentes: [`beamng.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamng.py),
-[`beamngshape.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngshape.py),
-[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngcollada.py).
+Fuentes: [`beamng.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamng.py),
+[`beamngshape.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngshape.py),
+[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngcollada.py).
 
 ## El sistema de archivos montado {#the-mounted-file-system}
 

@@ -1,6 +1,5 @@
 ---
 title: BeamNG.drive
-parent: Course export
 nav_order: 2
 ---
 
@@ -12,16 +11,16 @@ texture, road and loose ground as their own parts, placed models by category, an
 water.
 
 ```
-python -m heat3d_gamefiles course beamng_lap.json
-python -m heat3d_gamefiles course beamng_lap.json --level <level folder>
-python -m heat3d_gamefiles course beamng_lap.json --install "D:\Games\BeamNG.drive"
-python -m heat3d_gamefiles course lap.csv --game beamng
+heat3d-beamng-maps course beamng_lap.json
+heat3d-beamng-maps course beamng_lap.json --level <level folder>
+heat3d-beamng-maps course beamng_lap.json --install "D:\Games\BeamNG.drive"
+heat3d-beamng-maps course lap.csv --game beamng
 ```
 
-Sources: [`beamng.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamng.py) (install, file system, scene, terrain, materials),
-[`beamngcourse.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngcourse.py) (the export),
-[`beamngshape.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngshape.py) and
-[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngcollada.py) (shapes).
+Sources: [`beamng.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamng.py) (install, file system, scene, terrain, materials),
+[`beamngcourse.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngcourse.py) (the export),
+[`beamngshape.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngshape.py) and
+[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngcollada.py) (shapes).
 File formats in detail: [BeamNG files](reader-beamng.md).
 
 ## The lap's frame
@@ -109,7 +108,7 @@ What a level is made of, each part checked against the shipped levels
 ## The corridor and the road decals
 
 The corridor is `--margin` metres around the lap in BeamNG's x/y plane (see
-[Course export](course-export.md#the-corridor)). A reach corridor of
+[Course export](https://holdi601.github.io/3DHeat-GameFiles/course-export.html#the-corridor)). A reach corridor of
 `margin + 60 m` selects the candidates.
 
 **Road decals** (`DecalRoad`) are where most of BeamNG's roads are: painted on
@@ -240,7 +239,7 @@ average colour (alpha-weighted, in sRGB, times the material tint), or in the
 category colour if it has no texture.
 
 **Detail** follows the shared scheme on
-[Levels of detail and the budget](detail-budget.md). BeamNG's levels of detail are
+[Levels of detail and the budget](https://holdi601.github.io/3DHeat-GameFiles/detail-budget.html). BeamNG's levels of detail are
 the shape's `details` (largest pixel size first). Over budget, the furthest
 copies go first. Kerbs and models carrying driving surface are never simplified
 or left out.

@@ -3,7 +3,7 @@ title: "BeamNG.drive"
 nav_order: 2
 lang: "de"
 source: course-beamng.md
-source_hash: "20b6c04360dc"
+source_hash: "1d9100dea4ce"
 nav_exclude: true
 search_exclude: true
 ---
@@ -14,16 +14,16 @@ Datei wie der Forza-Export: Boden je 512-m-Quadrat mit einer eingebackenen Textu
 Boden als eigene Teile, platzierte Modelle nach Kategorie und Wasser.
 
 ```
-python -m heat3d_gamefiles course beamng_lap.json
-python -m heat3d_gamefiles course beamng_lap.json --level <level folder>
-python -m heat3d_gamefiles course beamng_lap.json --install "D:\Games\BeamNG.drive"
-python -m heat3d_gamefiles course lap.csv --game beamng
+heat3d-beamng-maps course beamng_lap.json
+heat3d-beamng-maps course beamng_lap.json --level <level folder>
+heat3d-beamng-maps course beamng_lap.json --install "D:\Games\BeamNG.drive"
+heat3d-beamng-maps course lap.csv --game beamng
 ```
 
-Quellen: [`beamng.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamng.py) (Installation, Dateisystem, Szene, Gelände, Materialien),
-[`beamngcourse.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngcourse.py) (der Export),
-[`beamngshape.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngshape.py) und
-[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngcollada.py) (Shapes).
+Quellen: [`beamng.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamng.py) (Installation, Dateisystem, Szene, Gelände, Materialien),
+[`beamngcourse.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngcourse.py) (der Export),
+[`beamngshape.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngshape.py) und
+[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngcollada.py) (Shapes).
 Dateiformate im Detail: [BeamNG-Dateien](reader-beamng.md).
 
 ## Das Koordinatensystem der Runde {#the-laps-frame}
@@ -109,7 +109,7 @@ Woraus ein Level besteht, jeder Teil gegen die mitgelieferten Level geprüft
 ## Der Korridor und die Straßen-Decals {#the-corridor-and-the-road-decals}
 
 Der Korridor ist `--margin` Meter um die Runde in der x/y-Ebene von BeamNG (siehe
-[Strecken-Export](course-export.md#the-corridor)). Ein Reichweiten-Korridor von `margin + 60 m` wählt
+[Strecken-Export](https://holdi601.github.io/3DHeat-GameFiles/de/course-export.html#the-corridor)). Ein Reichweiten-Korridor von `margin + 60 m` wählt
 die Kandidaten aus.
 
 **Straßen-Decals** (`DecalRoad`) sind der Großteil der Straßen von BeamNG: auf das Gelände gemalt,
@@ -235,7 +235,7 @@ der Textur gezeichnet (alphagewichtet, in sRGB, multipliziert mit der Tönung de
 der Kategoriefarbe, wenn sie keine Textur hat.
 
 **Detail** folgt dem gemeinsamen Schema unter
-[Detailstufen und Budget](detail-budget.md). Die Detailstufen von BeamNG sind die `details` der Form
+[Detailstufen und Budget](https://holdi601.github.io/3DHeat-GameFiles/de/detail-budget.html). Die Detailstufen von BeamNG sind die `details` der Form
 (größte Pixelgröße zuerst). Über dem Budget gehen die entferntesten Kopien zuerst. Bordsteine und
 Modelle mit Fahrfläche werden nie vereinfacht oder weggelassen.
 

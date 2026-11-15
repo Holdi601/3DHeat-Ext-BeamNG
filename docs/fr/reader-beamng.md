@@ -3,7 +3,7 @@ title: "Fichiers BeamNG"
 nav_order: 8
 lang: "fr"
 source: reader-beamng.md
-source_hash: "6f7a0239e385"
+source_hash: "c782ef4cb1e7"
 nav_exclude: true
 search_exclude: true
 ---
@@ -16,9 +16,9 @@ lecteurs sont atteints par l'export de parcours [BeamNG.drive](course-beamng.md)
 aussi une archive de niveau, un `.cdae` et un `.ter`, et `list` et `extract` prennent n'importe lequel
 des zips.
 
-Sources : [`beamng.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamng.py),
-[`beamngshape.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngshape.py),
-[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngcollada.py).
+Sources : [`beamng.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamng.py),
+[`beamngshape.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngshape.py),
+[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngcollada.py).
 
 ## Le système de fichiers monté {#the-mounted-file-system}
 

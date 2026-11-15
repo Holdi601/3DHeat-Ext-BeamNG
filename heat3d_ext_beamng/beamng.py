@@ -71,7 +71,7 @@ def find_install(extra: tuple[str | Path, ...] = (), *, defaults: bool = True) -
     """The game's folder: the one holding `gameengine.zip` and `content`."""
     candidates: list[Path] = [Path(p) for p in extra]
     if defaults:
-        from .steam import steam_libraries
+        from heat3d_gamefiles.steam import steam_libraries
 
         for library in steam_libraries():
             candidates.append(Path(library) / "steamapps" / "common" / GAME_FOLDER)

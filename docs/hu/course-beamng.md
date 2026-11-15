@@ -3,7 +3,7 @@ title: BeamNG.drive
 nav_order: 2
 lang: "hu"
 source: course-beamng.md
-source_hash: "20b6c04360dc"
+source_hash: "1d9100dea4ce"
 nav_exclude: true
 search_exclude: true
 ---
@@ -15,16 +15,16 @@ textúrával, az úttestet és a laza talajt külön részként, az elhelyezett
 modelleket kategóriánként, és a vizet.
 
 ```
-python -m heat3d_gamefiles course beamng_lap.json
-python -m heat3d_gamefiles course beamng_lap.json --level <level folder>
-python -m heat3d_gamefiles course beamng_lap.json --install "D:\Games\BeamNG.drive"
-python -m heat3d_gamefiles course lap.csv --game beamng
+heat3d-beamng-maps course beamng_lap.json
+heat3d-beamng-maps course beamng_lap.json --level <level folder>
+heat3d-beamng-maps course beamng_lap.json --install "D:\Games\BeamNG.drive"
+heat3d-beamng-maps course lap.csv --game beamng
 ```
 
-Források: [`beamng.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamng.py) (telepítés, fájlrendszer, jelenet, terep, anyagok),
-[`beamngcourse.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngcourse.py) (az export),
-[`beamngshape.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngshape.py) és
-[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngcollada.py) (alakzatok).
+Források: [`beamng.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamng.py) (telepítés, fájlrendszer, jelenet, terep, anyagok),
+[`beamngcourse.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngcourse.py) (az export),
+[`beamngshape.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngshape.py) és
+[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngcollada.py) (alakzatok).
 A fájlformátumok részletesen: [BeamNG-fájlok](reader-beamng.md).
 
 ## A kör koordinátarendszere {#the-laps-frame}
@@ -116,7 +116,7 @@ Egy pálya a következőkből áll, mindegyik a shipped pályákhoz ellenőrizve
 ## A folyosó és az úttest-matricák {#the-corridor-and-the-road-decals}
 
 A folyosó `--margin` méter a kör körül a BeamNG x/y síkjában (lásd:
-[Pályaexportálás](course-export.md#the-corridor)). A `margin + 60 m`-es
+[Pályaexportálás](https://holdi601.github.io/3DHeat-GameFiles/hu/course-export.html#the-corridor)). A `margin + 60 m`-es
 elérési folyosó választja ki a jelölteket.
 
 **Úttest-matricák** (`DecalRoad`): a BeamNG útjainak nagy része ezek: a terepre
@@ -252,7 +252,7 @@ csoport, amelynek textúrája ismétlődik, a textúra átlagszínével rajzoló
 (alfa-súlyozva, sRGB-ben, az anyag színezésével szorozva), vagy a kategória
 színével, ha nincs textúrája.
 
-**Részletesség.** A közös séma szerint (lásd: [Részletességi szintek és a keret](detail-budget.md)).
+**Részletesség.** A közös séma szerint (lásd: [Részletességi szintek és a keret](https://holdi601.github.io/3DHeat-GameFiles/hu/detail-budget.html)).
 A BeamNG részletességi szintjei az alakzat `details` mezői (a legnagyobb
 pixelmérettel kezdve). A keret túllépésekor a legtávolabbi másolatok mennek
 először. A szegélyek és a vezetőfelületet hordozó modellek soha nem egyszerűsödnek

@@ -3,7 +3,7 @@ title: BeamNG.drive
 nav_order: 2
 lang: "pl"
 source: course-beamng.md
-source_hash: "20b6c04360dc"
+source_hash: "1d9100dea4ce"
 nav_exclude: true
 search_exclude: true
 ---
@@ -15,16 +15,16 @@ drogę i luźny grunt jako osobne części, umieszczone modele według kategorii
 wodę.
 
 ```
-python -m heat3d_gamefiles course beamng_lap.json
-python -m heat3d_gamefiles course beamng_lap.json --level <level folder>
-python -m heat3d_gamefiles course beamng_lap.json --install "D:\Games\BeamNG.drive"
-python -m heat3d_gamefiles course lap.csv --game beamng
+heat3d-beamng-maps course beamng_lap.json
+heat3d-beamng-maps course beamng_lap.json --level <level folder>
+heat3d-beamng-maps course beamng_lap.json --install "D:\Games\BeamNG.drive"
+heat3d-beamng-maps course lap.csv --game beamng
 ```
 
-Źródła: [`beamng.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamng.py) (instalacja, system plików, scena, teren, materiały),
-[`beamngcourse.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngcourse.py) (eksport),
-[`beamngshape.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngshape.py) i
-[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngcollada.py) (kształty).
+Źródła: [`beamng.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamng.py) (instalacja, system plików, scena, teren, materiały),
+[`beamngcourse.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngcourse.py) (eksport),
+[`beamngshape.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngshape.py) i
+[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngcollada.py) (kształty).
 Szczegółowy opis formatów plików: [Pliki BeamNG](reader-beamng.md).
 
 ## Układ okrążenia {#the-laps-frame}
@@ -91,7 +91,7 @@ Z czego składa się poziom, każda część sprawdzona na poziomach dostarczony
 ## Korytarz i dekale drogowe {#the-corridor-and-the-road-decals}
 
 Korytarz to `--margin` metrów wokół okrążenia w płaszczyźnie x/y BeamNG (zobacz
-[Eksport toru](course-export.md#the-corridor)). Korytarz zasięgu o szerokości
+[Eksport toru](https://holdi601.github.io/3DHeat-GameFiles/pl/course-export.html#the-corridor)). Korytarz zasięgu o szerokości
 `margin + 60 m` wybiera kandydatów.
 
 **Dekale drogowe** (`DecalRoad`) to większość dróg BeamNG: malowane na terenie, a
@@ -199,7 +199,7 @@ pakuje tekstury w atlas i nie potrafi ich powtarzać. Grupa, której tekstura si
 powtarza, jest rysowana w średnim kolorze tekstury (ważonym alfą, w sRGB, pomnożonym
 przez odcień materiału), a jeśli nie ma tekstury, w kolorze kategorii.
 
-**Szczegółowość** idzie według wspólnego schematu z [Poziomy szczegółowości i budżet](detail-budget.md).
+**Szczegółowość** idzie według wspólnego schematu z [Poziomy szczegółowości i budżet](https://holdi601.github.io/3DHeat-GameFiles/pl/detail-budget.html).
 Poziomy szczegółowości BeamNG to `details` kształtu (od największego rozmiaru w pikselach).
 Przy przekroczeniu budżetu najpierw idą najdalsze kopie. Krawężniki i modele niosące
 powierzchnię jezdną nigdy nie są upraszczane ani pomijane.

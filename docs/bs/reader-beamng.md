@@ -3,7 +3,7 @@ title: "BeamNG datoteke"
 nav_order: 8
 lang: "bs"
 source: reader-beamng.md
-source_hash: "6f7a0239e385"
+source_hash: "c782ef4cb1e7"
 nav_exclude: true
 search_exclude: true
 ---
@@ -16,9 +16,9 @@ dekodiranje terena i kompiliranih oblika. Do ovih čitača dolazi se kroz izvoz
 staze [BeamNG.drive](course-beamng.md). `identify` imenuje i zip nivoa, `.cdae` i
 `.ter`, a `list` i `extract` uzimaju bilo koji od zipova.
 
-Izvori: [`beamng.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamng.py),
-[`beamngshape.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngshape.py),
-[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngcollada.py).
+Izvori: [`beamng.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamng.py),
+[`beamngshape.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngshape.py),
+[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngcollada.py).
 
 ## Montirani datotečni sistem {#the-mounted-file-system}
 

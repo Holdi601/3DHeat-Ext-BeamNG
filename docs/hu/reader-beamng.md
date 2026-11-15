@@ -3,7 +3,7 @@ title: BeamNG-fájlok
 nav_order: 8
 lang: "hu"
 source: reader-beamng.md
-source_hash: "6f7a0239e385"
+source_hash: "c782ef4cb1e7"
 nav_exclude: true
 search_exclude: true
 ---
@@ -16,9 +16,9 @@ alakzatokat. Ezeket az olvasókat a [BeamNG.drive](course-beamng.md) pályaexpor
 egy pályazipet, egy `.cdae`-t és egy `.ter`-t is felismer, a `list` és az `extract` pedig bármelyik zipet
 elfogadja.
 
-Forrás: [`beamng.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamng.py),
-[`beamngshape.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngshape.py),
-[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngcollada.py).
+Forrás: [`beamng.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamng.py),
+[`beamngshape.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngshape.py),
+[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngcollada.py).
 
 ## A csatolt fájlrendszer {#the-mounted-file-system}
 

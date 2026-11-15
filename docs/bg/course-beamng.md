@@ -3,7 +3,7 @@ title: "BeamNG.drive"
 nav_order: 2
 lang: "bg"
 source: course-beamng.md
-source_hash: "20b6c04360dc"
+source_hash: "1d9100dea4ce"
 nav_exclude: true
 search_exclude: true
 ---
@@ -14,16 +14,16 @@ search_exclude: true
 свободната земя като отделни части, поставени модели по категория и вода.
 
 ```
-python -m heat3d_gamefiles course beamng_lap.json
-python -m heat3d_gamefiles course beamng_lap.json --level <level folder>
-python -m heat3d_gamefiles course beamng_lap.json --install "D:\Games\BeamNG.drive"
-python -m heat3d_gamefiles course lap.csv --game beamng
+heat3d-beamng-maps course beamng_lap.json
+heat3d-beamng-maps course beamng_lap.json --level <level folder>
+heat3d-beamng-maps course beamng_lap.json --install "D:\Games\BeamNG.drive"
+heat3d-beamng-maps course lap.csv --game beamng
 ```
 
-Източници: [`beamng.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamng.py) (инсталация, файлова система, сцена, терен, материали),
-[`beamngcourse.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngcourse.py) (експортът),
-[`beamngshape.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngshape.py) и
-[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngcollada.py) (формите).
+Източници: [`beamng.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamng.py) (инсталация, файлова система, сцена, терен, материали),
+[`beamngcourse.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngcourse.py) (експортът),
+[`beamngshape.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngshape.py) и
+[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngcollada.py) (формите).
 Форматите на файловете подробно: [Файлове на BeamNG](reader-beamng.md).
 
 ## Рамката на обиколката {#the-laps-frame}
@@ -107,7 +107,7 @@ BeamNG разпространява обикновени zip архиви и г�
 ## Коридорът и декалите на пътищата {#the-corridor-and-the-road-decals}
 
 Коридорът е `--margin` метра около обиколката в равнината x/y на BeamNG (вижте
-[Експорт на трасе](course-export.md#the-corridor)). Коридор за достигане от `margin + 60 m`
+[Експорт на трасе](https://holdi601.github.io/3DHeat-GameFiles/bg/course-export.html#the-corridor)). Коридор за достигане от `margin + 60 m`
 избира кандидатите.
 
 **Декалите на пътищата** (`DecalRoad`) са там, където са повечето пътища на BeamNG: нарисувани
@@ -231,7 +231,7 @@ BeamNG разпространява обикновени zip архиви и г�
 (претеглен по алфа, в sRGB, умножен по нюанса на материала), или в цвета на категорията,
 ако няма текстура.
 
-**Детайлност.** Следва общата схема от [Нива на детайлност и бюджетът](detail-budget.md).
+**Детайлност.** Следва общата схема от [Нива на детайлност и бюджетът](https://holdi601.github.io/3DHeat-GameFiles/bg/detail-budget.html).
 Нивата на детайлност на BeamNG са `details` на формата (първо най-големият размер в пиксели).
 Когато бюджетът е превишен, най-отдалечените копия отиват първи. Бордюрите и моделите, които
 носят повърхност за шофиране, никога не се опростяват и не се пропускат.

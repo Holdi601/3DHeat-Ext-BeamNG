@@ -15,7 +15,7 @@ import struct
 import numpy as np
 import pytest
 
-from heat3d_gamefiles.beamng import (
+from heat3d_ext_beamng.beamng import (
     Files,
     Materials,
     axis_angle,
@@ -26,7 +26,7 @@ from heat3d_gamefiles.beamng import (
     torque_objects,
     transform_of,
 )
-from heat3d_gamefiles.beamngcourse import (
+from heat3d_ext_beamng.beamngcourse import (
     category,
     decal_kind,
     find_level,
@@ -35,8 +35,8 @@ from heat3d_gamefiles.beamngcourse import (
     surface_kind,
     to_viewer,
 )
-from heat3d_gamefiles.beamngshape import read_shape
-from heat3d_gamefiles.cli import main
+from heat3d_ext_beamng.beamngshape import read_shape
+from heat3d_ext_beamng.cli import main
 from heat3d_gamefiles.lapinput import describe, read
 
 from .beamng_fixtures import (
@@ -50,7 +50,7 @@ from .beamng_fixtures import (
     road_lap,
     terrain_file,
 )
-from .test_glb import read_back
+from .glb_helpers import read_back
 
 
 @pytest.fixture
@@ -306,8 +306,8 @@ class TestTheCourse:
         doc = lap_document(road_lap())
         doc["game"] = "assetto-corsa-evo"
         path.write_text(json.dumps(doc), encoding="utf-8")
-        assert main(["course", str(path)]) == 1
-        assert "obfuscated" in capsys.readouterr().err
+        assert main(["course", str(path)]) == 2
+        assert "no 3DHeat tool exports its course" in capsys.readouterr().err
 
 
 COLLADA = """<?xml version="1.0"?>
@@ -345,7 +345,7 @@ COLLADA = """<?xml version="1.0"?>
 
 class TestColladaFallback:
     def test_units_axes_uvs_and_levels_as_the_importer_applies_them(self):
-        from heat3d_gamefiles.beamngcollada import read_collada
+        from heat3d_ext_beamng.beamngcollada import read_collada
 
         shape = read_collada(COLLADA.encode())
         assert shape.levels() == [0, 1]
@@ -372,7 +372,7 @@ class TestTheInstalledGame:
         Every shape ships as `.dae` and as the `.cdae` the game compiled from
         it; read both ways, the full model has to land in the same place.
         """
-        from heat3d_gamefiles.beamngcollada import read_collada
+        from heat3d_ext_beamng.beamngcollada import read_collada
 
         files = Files.of_install(INSTALLED, mods=False)
         pairs = [k for k in files.names(prefix="art/shapes/", suffix=".cdae") if k[:-5] + ".dae" in files][:60]

@@ -3,7 +3,7 @@ title: "BeamNG.drive"
 nav_order: 2
 lang: "es"
 source: course-beamng.md
-source_hash: "20b6c04360dc"
+source_hash: "1d9100dea4ce"
 nav_exclude: true
 search_exclude: true
 ---
@@ -12,16 +12,16 @@ search_exclude: true
 La exportación de BeamNG lee un nivel tal como lo monta el juego, y luego escribe el mismo tipo de archivo que escribe la de Forza: suelo por cuadrado de 512 m con una textura horneada, la carretera y el suelo suelto como partes propias, los modelos colocados por categoría, y el agua.
 
 ```
-python -m heat3d_gamefiles course beamng_lap.json
-python -m heat3d_gamefiles course beamng_lap.json --level <level folder>
-python -m heat3d_gamefiles course beamng_lap.json --install "D:\Games\BeamNG.drive"
-python -m heat3d_gamefiles course lap.csv --game beamng
+heat3d-beamng-maps course beamng_lap.json
+heat3d-beamng-maps course beamng_lap.json --level <level folder>
+heat3d-beamng-maps course beamng_lap.json --install "D:\Games\BeamNG.drive"
+heat3d-beamng-maps course lap.csv --game beamng
 ```
 
-Fuentes: [`beamng.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamng.py) (instalación, sistema de archivos, escena, terreno, materiales),
-[`beamngcourse.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngcourse.py) (la exportación),
-[`beamngshape.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngshape.py) y
-[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngcollada.py) (formas).
+Fuentes: [`beamng.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamng.py) (instalación, sistema de archivos, escena, terreno, materiales),
+[`beamngcourse.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngcourse.py) (la exportación),
+[`beamngshape.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngshape.py) y
+[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngcollada.py) (formas).
 Formatos de archivo con detalle: [Archivos de BeamNG](reader-beamng.md).
 
 ## El marco de la vuelta {#the-laps-frame}
@@ -70,7 +70,7 @@ De qué está hecho un nivel, cada parte comprobada con los niveles incluidos (d
 
 ## El corredor y las calcomanías de carretera {#the-corridor-and-the-road-decals}
 
-El corredor es de `--margin` metros alrededor de la vuelta, en el plano x/y de BeamNG (mira [Exportar recorrido](course-export.md#the-corridor)). Un corredor de alcance de `margin + 60 m` selecciona los candidatos.
+El corredor es de `--margin` metros alrededor de la vuelta, en el plano x/y de BeamNG (mira [Exportar recorrido](https://holdi601.github.io/3DHeat-GameFiles/es/course-export.html#the-corridor)). Un corredor de alcance de `margin + 60 m` selecciona los candidatos.
 
 **Las calcomanías de carretera** (`DecalRoad`) son donde están la mayoría de las carreteras de BeamNG: pintadas sobre el terreno, no modeladas. Las calcomanías cuya extensión toca el corredor de alcance se toman en el orden de dibujo del juego (`renderPriority` descendente, y luego orden de archivo), y se disponen como cintas:
 
@@ -151,7 +151,7 @@ La **categoría** sale de la anotación del propio nivel y de la ruta de la form
 
 **Texturas.** Los modelos se agrupan por categoría y material en partes con el nombre `structure:<category> <material>` (o `ground:kerbs <material>`). Un grupo recibe la textura de color de su material a hasta **256 px** solo si sus UV se quedan entre 0 y 1 (el 98 % de los vértices entre -0,02 y 1,02). El visor empaqueta las texturas en un atlas y no puede repetir una. Un grupo cuya textura se repite se dibuja con el color medio de la textura (ponderado por alfa, en sRGB, por el tinte del material), o con el color de la categoría si no tiene textura.
 
-**El detalle** sigue el esquema común de [Niveles de detalle y presupuesto](detail-budget.md). Los niveles de detalle de BeamNG son los `details` de la forma (primero el de mayor tamaño en píxeles). Si se pasa del presupuesto, primero se quitan las copias más lejanas. Los bordillos y los modelos que llevan superficie de conducción nunca se simplifican ni se dejan fuera.
+**El detalle** sigue el esquema común de [Niveles de detalle y presupuesto](https://holdi601.github.io/3DHeat-GameFiles/es/detail-budget.html). Los niveles de detalle de BeamNG son los `details` de la forma (primero el de mayor tamaño en píxeles). Si se pasa del presupuesto, primero se quitan las copias más lejanas. Los bordillos y los modelos que llevan superficie de conducción nunca se simplifican ni se dejan fuera.
 
 `--no-placed` quita las estructuras, pero sigue manteniendo la superficie de conducción modelada. `--trees` añade la categoría de árboles.
 

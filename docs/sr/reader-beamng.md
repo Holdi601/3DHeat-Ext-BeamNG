@@ -3,7 +3,7 @@ title: BeamNG датотеке
 nav_order: 8
 lang: "sr"
 source: reader-beamng.md
-source_hash: "6f7a0239e385"
+source_hash: "c782ef4cb1e7"
 nav_exclude: true
 search_exclude: true
 ---
@@ -11,9 +11,9 @@ search_exclude: true
 
 BeamNG.drive испоручује обичне zip архиве, па нема контејнера који би се обрнуто инжењеровао. Посао је у читању нивоа **онако како га игра чита**: монтирање архива у један систем датотека, праћење фајлова сцене и декодирање терена и компајлираних облика. До ових читача се долази преко извоза стазе [BeamNG.drive](course-beamng.md). `identify` такође препознаје zip нивоа, `.cdae` и `.ter`, а `list` и `extract` узимају било који од zip-ова.
 
-Извори: [`beamng.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamng.py),
-[`beamngshape.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngshape.py),
-[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngcollada.py).
+Извори: [`beamng.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamng.py),
+[`beamngshape.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngshape.py),
+[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngcollada.py).
 
 ## Монтирани систем датотека {#the-mounted-file-system}
 

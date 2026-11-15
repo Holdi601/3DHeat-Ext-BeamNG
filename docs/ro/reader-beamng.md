@@ -3,7 +3,7 @@ title: "Fișiere BeamNG: arhive de nivel, `.ter`, `.cdae`, `.dae`"
 nav_order: 8
 lang: "ro"
 source: reader-beamng.md
-source_hash: "6f7a0239e385"
+source_hash: "c782ef4cb1e7"
 nav_exclude: true
 search_exclude: true
 ---
@@ -11,9 +11,9 @@ search_exclude: true
 
 BeamNG.drive livrează arhive zip obișnuite, deci nu există un container de analizat prin inginerie inversă. Munca constă în citirea unui nivel **așa cum o face jocul**: montarea arhivelor într-un singur sistem de fișiere, urmarea fișierelor de scenă și decodarea terenului și a formelor compilate. Aceste cititoare se ating prin exportul de circuit [BeamNG.drive](course-beamng.md). `identify` recunoaște și un zip de nivel, un `.cdae` și un `.ter`, iar `list` și `extract` iau oricare dintre zip-uri.
 
-Surse: [`beamng.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamng.py),
-[`beamngshape.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngshape.py),
-[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngcollada.py).
+Surse: [`beamng.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamng.py),
+[`beamngshape.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngshape.py),
+[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngcollada.py).
 
 ## Sistemul de fișiere montat {#the-mounted-file-system}
 

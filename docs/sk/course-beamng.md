@@ -3,7 +3,7 @@ title: "BeamNG.drive"
 nav_order: 2
 lang: "sk"
 source: course-beamng.md
-source_hash: "20b6c04360dc"
+source_hash: "1d9100dea4ce"
 nav_exclude: true
 search_exclude: true
 ---
@@ -14,16 +14,16 @@ súboru ako export Forzy: zem po štvorcoch 512 m s pečenou textúrou, cesta a
 voľná zem ako samostatné časti, umiestnené modely podľa kategórií a voda.
 
 ```
-python -m heat3d_gamefiles course beamng_lap.json
-python -m heat3d_gamefiles course beamng_lap.json --level <level folder>
-python -m heat3d_gamefiles course beamng_lap.json --install "D:\Games\BeamNG.drive"
-python -m heat3d_gamefiles course lap.csv --game beamng
+heat3d-beamng-maps course beamng_lap.json
+heat3d-beamng-maps course beamng_lap.json --level <level folder>
+heat3d-beamng-maps course beamng_lap.json --install "D:\Games\BeamNG.drive"
+heat3d-beamng-maps course lap.csv --game beamng
 ```
 
-Zdroje: [`beamng.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamng.py) (inštalácia, súborový systém, scéna, terén, materiály),
-[`beamngcourse.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngcourse.py) (export),
-[`beamngshape.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngshape.py) a
-[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngcollada.py) (tvary).
+Zdroje: [`beamng.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamng.py) (inštalácia, súborový systém, scéna, terén, materiály),
+[`beamngcourse.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngcourse.py) (export),
+[`beamngshape.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngshape.py) a
+[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngcollada.py) (tvary).
 Formáty súborov podrobne: [Súbory BeamNG](reader-beamng.md).
 
 ## Rámec kola {#the-lap-s-frame}
@@ -89,7 +89,7 @@ Z čoho sa level skladá, každá časť overená voči dodaným levelom
 
 ## Koridor a cestné nálepky {#the-corridor-and-the-road-decals}
 
-Koridor je `--margin` metrov okolo kola v rovine x/y BeamNG (pozri [Export trate](course-export.md#the-corridor)). Koridor dosahu `margin + 60 m` vyberie kandidátov.
+Koridor je `--margin` metrov okolo kola v rovine x/y BeamNG (pozri [Export trate](https://holdi601.github.io/3DHeat-GameFiles/sk/course-export.html#the-corridor)). Koridor dosahu `margin + 60 m` vyberie kandidátov.
 
 **Cestné nálepky** (`DecalRoad`) sú väčšina ciest BeamNG: namaľované na
 terén, nie modelované. Nálepky, ktorých rozsah sa dotýka koridora dosahu, sa
@@ -195,7 +195,7 @@ a nevie jednu opakovať. Skupina, ktorej textúra sa opakuje, sa kreslí v priem
 farbe textúry (alfou vážená, v sRGB, vynásobená farbou materiálu), alebo v
 farbe kategórie, ak nemá textúru.
 
-**Detail** sa riadi spoločnou schémou v [Úrovne detailu a rozpočet](detail-budget.md).
+**Detail** sa riadi spoločnou schémou v [Úrovne detailu a rozpočet](https://holdi601.github.io/3DHeat-GameFiles/sk/detail-budget.html).
 Úrovne detailu BeamNG sú `details` tvaru (najväčšia pixelová veľkosť ako prvá).
 Keď je rozpočet prekročený, najvzdialenejšie kópie idú prvé. Obruby a modely
 nesúce povrch jazdy sa nikdy nezjednodušujú ani nevynechávajú.

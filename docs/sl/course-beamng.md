@@ -3,7 +3,7 @@ title: BeamNG.drive
 nav_order: 2
 lang: "sl"
 source: course-beamng.md
-source_hash: "20b6c04360dc"
+source_hash: "1d9100dea4ce"
 nav_exclude: true
 search_exclude: true
 ---
@@ -14,16 +14,16 @@ kot izvoz Forze: tla po kvadratih 512 m s speče teksturo, cesto in rahla tla ko
 ločena dela, postavljene modele po kategorijah in vodo.
 
 ```
-python -m heat3d_gamefiles course beamng_lap.json
-python -m heat3d_gamefiles course beamng_lap.json --level <level folder>
-python -m heat3d_gamefiles course beamng_lap.json --install "D:\Games\BeamNG.drive"
-python -m heat3d_gamefiles course lap.csv --game beamng
+heat3d-beamng-maps course beamng_lap.json
+heat3d-beamng-maps course beamng_lap.json --level <level folder>
+heat3d-beamng-maps course beamng_lap.json --install "D:\Games\BeamNG.drive"
+heat3d-beamng-maps course lap.csv --game beamng
 ```
 
-Viri: [`beamng.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamng.py) (namestitev, datotečni sistem, prizor, teren, materiali),
-[`beamngcourse.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngcourse.py) (izvoz),
-[`beamngshape.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngshape.py) in
-[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngcollada.py) (oblike).
+Viri: [`beamng.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamng.py) (namestitev, datotečni sistem, prizor, teren, materiali),
+[`beamngcourse.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngcourse.py) (izvoz),
+[`beamngshape.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngshape.py) in
+[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngcollada.py) (oblike).
 Podrobne oblike datotek: [Datoteke BeamNG](reader-beamng.md).
 
 ## Okvir lapa {#the-laps-frame}
@@ -108,7 +108,7 @@ Iz česa je nivo sestavljen, vsak del preverjen na objavljenih nivojih (podrobno
 ## Koridor in dekali cest {#the-corridor-and-the-road-decals}
 
 Koridor je `--margin` metrov okoli lapa v ravnini x/y BeamNG (glejte
-[Izvoz tečaja](course-export.md#the-corridor)). Koridor dosega `margin + 60 m` izbere
+[Izvoz tečaja](https://holdi601.github.io/3DHeat-GameFiles/sl/course-export.html#the-corridor)). Koridor dosega `margin + 60 m` izbere
 kandidate.
 
 **Dekali cest** (`DecalRoad`) so tam, kjer je večina cest BeamNG: naslikani na teren,
@@ -233,7 +233,7 @@ ene ne more ponoviti. Skupina, katere tekstura se ponavlja, se nariše v povpre�
 teksture (utežena z alfo, v sRGB, pomnožena z barvnim odtenkom materiala), ali v barvi
 kategorije, če nima teksture.
 
-**Podrobnost** sledi skupni shemi v [Stopnje podrobnosti in proračun](detail-budget.md).
+**Podrobnost** sledi skupni shemi v [Stopnje podrobnosti in proračun](https://holdi601.github.io/3DHeat-GameFiles/sl/detail-budget.html).
 Stopnje podrobnosti BeamNG so `details` oblike (najprej največja velikost v pikah).
 Čez proračun gredo najprej najbolj oddaljene kopije. Robniki in modeli, ki nosijo
 vozno površino, se nikoli ne poenostavijo ali izpustijo.

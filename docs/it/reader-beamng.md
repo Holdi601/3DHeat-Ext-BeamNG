@@ -3,7 +3,7 @@ title: File di BeamNG
 nav_order: 8
 lang: "it"
 source: reader-beamng.md
-source_hash: "6f7a0239e385"
+source_hash: "c782ef4cb1e7"
 nav_exclude: true
 search_exclude: true
 ---
@@ -15,9 +15,9 @@ di scena, e decodificare il terreno e le forme compilate. Questi lettori vengono
 percorso di [BeamNG.drive](course-beamng.md). `identify` riconosce anche uno zip di livello, un `.cdae` e un
 `.ter`, e `list` ed `extract` prendono qualsiasi zip.
 
-Sorgenti: [`beamng.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamng.py),
-[`beamngshape.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngshape.py),
-[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngcollada.py).
+Sorgenti: [`beamng.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamng.py),
+[`beamngshape.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngshape.py),
+[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngcollada.py).
 
 ## Il file system montato {#the-mounted-file-system}
 

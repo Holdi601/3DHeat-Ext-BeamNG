@@ -3,7 +3,7 @@ title: BeamNG.drive
 nav_order: 2
 lang: "el"
 source: course-beamng.md
-source_hash: "20b6c04360dc"
+source_hash: "1d9100dea4ce"
 nav_exclude: true
 search_exclude: true
 ---
@@ -14,16 +14,16 @@ search_exclude: true
 ανά κατηγορία, και νερό.
 
 ```
-python -m heat3d_gamefiles course beamng_lap.json
-python -m heat3d_gamefiles course beamng_lap.json --level <level folder>
-python -m heat3d_gamefiles course beamng_lap.json --install "D:\Games\BeamNG.drive"
-python -m heat3d_gamefiles course lap.csv --game beamng
+heat3d-beamng-maps course beamng_lap.json
+heat3d-beamng-maps course beamng_lap.json --level <level folder>
+heat3d-beamng-maps course beamng_lap.json --install "D:\Games\BeamNG.drive"
+heat3d-beamng-maps course lap.csv --game beamng
 ```
 
-Πηγές: [`beamng.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamng.py) (εγκατάσταση, σύστημα αρχείων, σκηνή, έδαφος, υλικά),
-[`beamngcourse.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngcourse.py) (η εξαγωγή),
-[`beamngshape.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngshape.py) και
-[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngcollada.py) (σχήματα).
+Πηγές: [`beamng.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamng.py) (εγκατάσταση, σύστημα αρχείων, σκηνή, έδαφος, υλικά),
+[`beamngcourse.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngcourse.py) (η εξαγωγή),
+[`beamngshape.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngshape.py) και
+[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngcollada.py) (σχήματα).
 Αναλυτικά για τις μορφές αρχείων: [Αρχεία BeamNG](reader-beamng.md).
 
 ## Το πλαίσιο του γύρου {#the-laps-frame}
@@ -86,7 +86,7 @@ python -m heat3d_gamefiles course lap.csv --game beamng
 
 ## Ο διάδρομος και οι δρόμοι-διακοσμήσεις {#the-corridor-and-the-road-decals}
 
-Ο διάδρομος είναι `--margin` μέτρα γύρω από τον γύρο στο επίπεδο x/y του BeamNG (δείτε [Εξαγωγή πίστας](course-export.md#the-corridor)). Ένας διάδρομος αναζήτησης `margin + 60 m` επιλέγει τους υποψηφίους.
+Ο διάδρομος είναι `--margin` μέτρα γύρω από τον γύρο στο επίπεδο x/y του BeamNG (δείτε [Εξαγωγή πίστας](https://holdi601.github.io/3DHeat-GameFiles/el/course-export.html#the-corridor)). Ένας διάδρομος αναζήτησης `margin + 60 m` επιλέγει τους υποψηφίους.
 
 Οι **δρόμοι-διακοσμήσεις** (`DecalRoad`) είναι όπου βρίσκεται το μεγαλύτερο μέρος των δρόμων του BeamNG: ζωγραφισμένοι πάνω στο έδαφος, όχι μοντελοποιημένοι. Οι διακοσμήσεις που η έκτασή τους αγγίζει τον διάδρομο αναζήτησης παίρνονται στη σειρά σχεδίασης του παιχνιδιού (φθίνον `renderPriority`, μετά σειρά αρχείου), και διατάσσονται ως κορδέλες:
 
@@ -174,7 +174,7 @@ python -m heat3d_gamefiles course lap.csv --game beamng
 `structure:<category> <material>` (ή `ground:kerbs <material>`). Μια ομάδα παίρνει την έγχρωμη υφή του υλικού της το πολύ **256 px** μόνο αν οι UV της μένουν μέσα στο 0-1
 (98% των κορυφών μέσα στο -0,02 έως 1,02). Ο viewer πακετάρει τις υφές σε άτλαντα και δεν μπορεί να επαναλάβει μία. Μια ομάδα της οποίας η υφή επαναλαμβάνεται σχεδιάζεται στο μέσο χρώμα της υφής (σταθμισμένο με το άλφα, σε sRGB, επί τον χρωματισμό του υλικού), ή στο χρώμα της κατηγορίας αν δεν έχει υφή.
 
-**Λεπτομέρεια.** Ακολουθεί το κοινό σχήμα της σελίδας [Επίπεδα λεπτομέρειας και προϋπολογισμός](detail-budget.md). Τα επίπεδα λεπτομέρειας του BeamNG είναι τα `details` του σχήματος (πρώτα το μεγαλύτερο μέγεθος σε pixel). Όταν ξεπερνιέται ο προϋπολογισμός, φεύγουν πρώτα τα πιο μακρινά αντίγραφα. Τα κράσπεδα και τα μοντέλα που φέρουν επιφάνεια οδήγησης δεν απλοποιούνται ποτέ και δεν αφήνονται έξω.
+**Λεπτομέρεια.** Ακολουθεί το κοινό σχήμα της σελίδας [Επίπεδα λεπτομέρειας και προϋπολογισμός](https://holdi601.github.io/3DHeat-GameFiles/el/detail-budget.html). Τα επίπεδα λεπτομέρειας του BeamNG είναι τα `details` του σχήματος (πρώτα το μεγαλύτερο μέγεθος σε pixel). Όταν ξεπερνιέται ο προϋπολογισμός, φεύγουν πρώτα τα πιο μακρινά αντίγραφα. Τα κράσπεδα και τα μοντέλα που φέρουν επιφάνεια οδήγησης δεν απλοποιούνται ποτέ και δεν αφήνονται έξω.
 
 Το `--no-placed` αφήνει έξω τις κατασκευές αλλά κρατά τη μοντελοποιημένη επιφάνεια οδήγησης. Το `--trees` προσθέτει την κατηγορία των δέντρων.
 

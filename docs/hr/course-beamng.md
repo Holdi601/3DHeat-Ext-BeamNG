@@ -3,7 +3,7 @@ title: BeamNG.drive
 nav_order: 2
 lang: "hr"
 source: course-beamng.md
-source_hash: "20b6c04360dc"
+source_hash: "1d9100dea4ce"
 nav_exclude: true
 search_exclude: true
 ---
@@ -12,16 +12,16 @@ search_exclude: true
 Izvoz BeamNG-a čita razinu onako kako je igra montira, a zatim piše istu vrstu datoteke koju piše izvoz Forze: tlo po kvadratu od 512 m s pečenom teksturom, cesta i rubno tlo kao vlastiti dijelovi, postavljeni modeli po kategoriji, te voda.
 
 ```
-python -m heat3d_gamefiles course beamng_lap.json
-python -m heat3d_gamefiles course beamng_lap.json --level <level folder>
-python -m heat3d_gamefiles course beamng_lap.json --install "D:\Games\BeamNG.drive"
-python -m heat3d_gamefiles course lap.csv --game beamng
+heat3d-beamng-maps course beamng_lap.json
+heat3d-beamng-maps course beamng_lap.json --level <level folder>
+heat3d-beamng-maps course beamng_lap.json --install "D:\Games\BeamNG.drive"
+heat3d-beamng-maps course lap.csv --game beamng
 ```
 
-Izvori: [`beamng.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamng.py) (instalacija, datotečni sustav, scena, teren, materijali),
-[`beamngcourse.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngcourse.py) (izvoz),
-[`beamngshape.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngshape.py) i
-[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngcollada.py) (oblici).
+Izvori: [`beamng.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamng.py) (instalacija, datotečni sustav, scena, teren, materijali),
+[`beamngcourse.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngcourse.py) (izvoz),
+[`beamngshape.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngshape.py) i
+[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngcollada.py) (oblici).
 Formati datoteka u detalju: [BeamNG datoteke](reader-beamng.md).
 
 ## Okvir kruga {#the-laps-frame}
@@ -70,7 +70,7 @@ Od čega se razina sastoji, svaki dio provjeren prema isporučenim razinama (poj
 
 ## Koridor i dekali cesta {#the-corridor-and-the-road-decals}
 
-Koridor je `--margin` metara oko kruga u BeamNG-ovoj ravnini x/y (vidi [Izvoz staze](course-export.md#the-corridor)). Koridor dosega od `margin + 60 m` bira kandidate.
+Koridor je `--margin` metara oko kruga u BeamNG-ovoj ravnini x/y (vidi [Izvoz staze](https://holdi601.github.io/3DHeat-GameFiles/hr/course-export.html#the-corridor)). Koridor dosega od `margin + 60 m` bira kandidate.
 
 **Dekali cesta** (`DecalRoad`) su mjesto gdje je većina BeamNG-ovih cesta: naslikani na terenu, ne modelirani. Dekali čiji opseg dodiruje koridor dosega uzimaju se redom crtanja igre (opadajući `renderPriority`, zatim redoslijed datoteke) i slažu se kao vrpce:
 
@@ -151,7 +151,7 @@ Kandidati su svaki `TSStatic`, dijete prefaba i šumska stavka čija je ishodiš
 
 **Teksture.** Modeli se grupiraju po kategoriji i materijalu u dijelove imenovane `structure:<category> <material>` (ili `ground:kerbs <material>`). Grupa dobiva boja teksturu svog materijala do **256 px** samo ako njezine UV koordinate ostaju unutar 0-1 (98% vrhova unutar -0.02 do 1.02). Preglednik slaže teksture u atlas i ne može ponavljati jednu. Grupa čija se tekstura ponavlja crta se prosječnom bojom teksture (ponderiranom alfom, u sRGB, pomnoženom nijansom materijala), ili bojom kategorije ako nema teksture.
 
-**Detalj** slijedi zajedničku shemu na [Razine detalja i proračun](detail-budget.md). BeamNG-ove razine detalja su `details` oblika (najveća veličina piksela prva). Kad je proračun premašen, najdalje kopije odlaze prve. Rubnjaci i modeli koji nose površinu vožnje nikad se ne pojednostavljuju niti izostavljaju.
+**Detalj** slijedi zajedničku shemu na [Razine detalja i proračun](https://holdi601.github.io/3DHeat-GameFiles/hr/detail-budget.html). BeamNG-ove razine detalja su `details` oblika (najveća veličina piksela prva). Kad je proračun premašen, najdalje kopije odlaze prve. Rubnjaci i modeli koji nose površinu vožnje nikad se ne pojednostavljuju niti izostavljaju.
 
 `--no-placed` izbacuje konstrukcije, ali zadržava modeliranu površinu vožnje. `--trees` dodaje kategoriju drveća.
 

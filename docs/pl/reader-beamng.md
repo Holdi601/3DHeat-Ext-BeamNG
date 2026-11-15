@@ -3,7 +3,7 @@ title: "Pliki BeamNG: poziomy archiwów, `.ter`, `.cdae`, `.dae`"
 nav_order: 8
 lang: "pl"
 source: reader-beamng.md
-source_hash: "6f7a0239e385"
+source_hash: "c782ef4cb1e7"
 nav_exclude: true
 search_exclude: true
 ---
@@ -11,9 +11,9 @@ search_exclude: true
 
 BeamNG.drive dostarcza zwykłe archiwa zip, więc nie ma kontenera do inżynierii wstecznej. Praca polega na czytaniu poziomu **tak, jak robi to gra**: zamontowaniu archiwów w jeden system plików, podążaniu za plikami scen i dekodowaniu terenu oraz skompilowanych kształtów. Do tych czytników dochodzi się przez eksport trasy [BeamNG.drive](course-beamng.md). `identify` rozpoznaje także zip poziomu, `.cdae` i `.ter`, a `list` i `extract` biorą dowolny z zipów.
 
-Źródła: [`beamng.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamng.py),
-[`beamngshape.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngshape.py),
-[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-GameFiles/blob/main/heat3d_gamefiles/beamngcollada.py).
+Źródła: [`beamng.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamng.py),
+[`beamngshape.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngshape.py),
+[`beamngcollada.py`](https://github.com/Holdi601/3DHeat-Ext-BeamNG/blob/main/heat3d_ext_beamng/beamngcollada.py).
 
 ## Zamontowany system plików {#the-mounted-file-system}
 
