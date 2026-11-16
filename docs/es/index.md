@@ -3,7 +3,7 @@ title: Inicio
 nav_order: 1
 lang: "es"
 source: index.md
-source_hash: "fdb34c981312"
+source_hash: "fa2c58a5b149"
 nav_exclude: true
 search_exclude: true
 permalink: /es/
@@ -45,6 +45,8 @@ La vuelta procede del grabador 3DHeat GameCapture y su mod para BeamNG
 El recorrido se construye con los archivos del juego: se queda en **tu equipo**, para verlo, no para
 compartirlo ni publicarlo ([Condiciones y licencias](terms.md)).
 
+Cada lector de juego es un pequeño proyecto propio, con su propio archivo de licencia, sus propias versiones y su propio gestor de incidencias, de modo que puede instalarse, actualizarse, mantenerse - o retirarse a petición de un titular de derechos - por separado, sin afectar al visor ni a las demás herramientas.
+
 ## Páginas {#pages}
 
 | Página | Qué cubre |
@@ -54,7 +56,7 @@ compartirlo ni publicarlo ([Condiciones y licencias](terms.md)).
 | [Encontrar el juego: levels](levels.md) | dónde está BeamNG.drive, qué muestra `levels` |
 | [¿Qué es este archivo?: identify](identify.md) | una forma `.cdae`, un terreno `.ter` o el zip de un nivel |
 | [Archivos de BeamNG](reader-beamng.md) | los formatos de archivo en detalle |
-| [Condiciones y licencias](terms.md) | el contenido de BeamNG, los formatos, por qué este es un paquete aparte |
+| [Condiciones y licencias](terms.md) | el contenido de BeamNG, los formatos, un proyecto propio |
 | [Referencia de comandos](../cli-reference.md) | cada opción, generada a partir del código |
 | [Mantener estos documentos](maintaining.md) | la lista de comprobaciones de cada versión |
 

@@ -3,7 +3,7 @@ title: Home
 nav_order: 1
 lang: "it"
 source: index.md
-source_hash: "fdb34c981312"
+source_hash: "fa2c58a5b149"
 nav_exclude: true
 search_exclude: true
 permalink: /it/
@@ -44,6 +44,8 @@ del visualizzatore con **Modello 3D…**.
 Il percorso è costruito a partire dai file del gioco: resta **sul tuo computer**, per
 guardarlo, non per condividerlo o pubblicarlo ([Termini](terms.md)).
 
+Ogni lettore di gioco è un piccolo progetto a sé, con il proprio file di licenza, le proprie release e il proprio issue tracker: può essere installato, aggiornato, mantenuto - o ritirato su richiesta di un titolare dei diritti - da solo, senza toccare il visualizzatore o gli altri strumenti.
+
 ## Pagine {#pages}
 
 | Pagina | Cosa contiene |
@@ -53,7 +55,7 @@ guardarlo, non per condividerlo o pubblicarlo ([Termini](terms.md)).
 | [Trovare il gioco: levels](levels.md) | dove viene trovato BeamNG.drive, cosa stampa `levels` |
 | [Che file è questo: identify](identify.md) | una forma `.cdae`, un terreno `.ter` o uno zip di livello |
 | [File di BeamNG](reader-beamng.md) | i formati dei file in dettaglio |
-| [Termini e licenza](terms.md) | i contenuti di BeamNG, i formati, perché questo è un pacchetto separato |
+| [Termini e licenza](terms.md) | i contenuti di BeamNG, i formati, un progetto a sé |
 | [Riferimento dei comandi](../cli-reference.md) | ogni opzione, generata dal codice |
 | [Manutenzione di queste pagine](maintaining.md) | la checklist di rilascio |
 

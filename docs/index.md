@@ -40,6 +40,11 @@ The lap comes from the 3DHeat GameCapture recorder and its BeamNG mod
 The course is built from the game's files: it stays **on your machine**, to
 view, not to share or publish ([Terms](terms.md)).
 
+Each game reader is its own small project with its own licence file, releases
+and issue tracker, so it can be installed, updated, maintained - or withdrawn
+on a rights holder's request - on its own, without affecting the viewer or the
+other tools.
+
 ## Pages
 
 | Page | What it covers |
@@ -49,7 +54,7 @@ view, not to share or publish ([Terms](terms.md)).
 | [Finding the game: levels](levels.md) | where BeamNG.drive is found, what `levels` prints |
 | [What is this file: identify](identify.md) | a `.cdae` shape, a `.ter` terrain or a level zip |
 | [BeamNG files](reader-beamng.md) | the file formats in detail |
-| [Terms and licence](terms.md) | BeamNG's content, the formats, why this is a separate package |
+| [Terms and licence](terms.md) | BeamNG's content, the formats, a project of its own |
 | [Command reference](cli-reference.md) | every option, generated from the code |
 | [Maintaining these docs](maintaining.md) | the release checklist |
 

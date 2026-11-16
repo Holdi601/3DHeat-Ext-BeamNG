@@ -3,7 +3,7 @@ title: Startseite
 nav_order: 1
 lang: "de"
 source: index.md
-source_hash: "fdb34c981312"
+source_hash: "fa2c58a5b149"
 nav_exclude: true
 search_exclude: true
 permalink: /de/
@@ -44,6 +44,8 @@ mit **3D-Modell…**.
 Die Strecke wird aus den Dateien des Spiels gebaut. Sie bleibt **auf deinem Rechner**, zum
 Anschauen, nicht zum Teilen oder Veröffentlichen ([Bedingungen](terms.md)).
 
+Jeder Spiele-Leser ist ein eigenes kleines Projekt mit eigener Lizenzdatei, eigenen Releases und eigenem Issue-Tracker. So lässt er sich für sich allein installieren, aktualisieren und pflegen - oder auf Wunsch eines Rechteinhabers zurückziehen -, ohne dass der Viewer oder die anderen Werkzeuge davon berührt werden.
+
 ## Seiten {#pages}
 
 | Seite | Was sie behandelt |
@@ -53,7 +55,7 @@ Anschauen, nicht zum Teilen oder Veröffentlichen ([Bedingungen](terms.md)).
 | [Das Spiel finden: levels](levels.md) | wo BeamNG.drive gefunden wird, was `levels` ausgibt |
 | [Was ist diese Datei: identify](identify.md) | eine `.cdae`-Form, ein `.ter`-Gelände oder ein Level-Zip |
 | [BeamNG-Dateien](reader-beamng.md) | die Dateiformate im Detail |
-| [Bedingungen und Lizenz](terms.md) | BeamNGs Inhalte, die Formate, warum dies ein eigenes Paket ist |
+| [Bedingungen und Lizenz](terms.md) | BeamNGs Inhalte, die Formate, ein Projekt für sich |
 | [Befehlsreferenz](../cli-reference.md) | jede Option, aus dem Code erzeugt |
 | [Diese Doku pflegen](maintaining.md) | die Checkliste für Releases |
 

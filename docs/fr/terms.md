@@ -3,7 +3,7 @@ title: "Conditions et licence"
 nav_order: 9
 lang: "fr"
 source: terms.md
-source_hash: "d94421d4d212"
+source_hash: "f80913a345e5"
 nav_exclude: true
 search_exclude: true
 ---
@@ -11,20 +11,24 @@ search_exclude: true
 
 ## Le contenu de BeamNG {#beamngs-content}
 
-BeamNG.drive et ses niveaux appartiennent à BeamNG GmbH, qui n'approuve pas ce projet. Cet outil ne
-livre rien du jeu et ne télécharge rien : il lit les fichiers de la copie **que vous** avez installée,
-sur votre machine, en dehors du jeu. Il ne modifie rien dans le jeu et ne parle à aucun serveur. Un
-parcours qu'il écrit est une œuvre dérivée du niveau de BeamNG : il est à vous pour analyser vos
-propres tours, et non pour le partager ou le publier. Utiliser l'outil est votre décision, selon les
-conditions que vous avez acceptées pour le jeu.
+BeamNG.drive et ses niveaux appartiennent à BeamNG GmbH. 3DHeat BeamNG n'est ni affilié à BeamNG
+GmbH ni soutenu par elle. BeamNG.drive ainsi que les noms et marques associés appartiennent à leurs
+propriétaires.
 
-C'est pour cela que c'est un paquet séparé : si BeamNG demande un jour son retrait, il part seul, et
-le visualiseur, GameFiles et les autres outils restent.
+Cet outil ne livre rien du jeu et ne télécharge rien : ni ressources du jeu, ni code du jeu, ni
+DLL. Il lit les fichiers de la copie **que vous** avez installée, sur votre machine, en dehors du
+jeu. Il ne modifie rien dans le jeu et ne parle à aucun serveur. Un parcours qu'il écrit est découpé
+dans le niveau de BeamNG et reste sur votre machine, pour analyser vos propres tours ; merci de ne
+pas le partager ni le publier.
+
+Chaque lecteur de jeu est un petit projet à part, avec son propre fichier de licence, ses propres versions et son propre suivi des tickets : il peut être installé, mis à jour, maintenu - ou retiré à la demande d'un ayant droit - seul, sans toucher au visualiseur ni aux autres outils.
+
+Ayants droit : ouvrez un ticket sur [github.com/Holdi601/3DHeat-Ext-BeamNG/issues](https://github.com/Holdi601/3DHeat-Ext-BeamNG/issues) - nous répondons rapidement et retirons tout ce qui est demandé.
 
 Les règles de 3DHeat GameFiles s'appliquent ici sans changement
 ([Règles et licences](https://holdi601.github.io/3DHeat-GameFiles/rules-and-licences.html)) :
 
-- **Vos fichiers, votre responsabilité.** L'outil lit les fichiers du jeu installés sur votre
+- **Vos fichiers.** L'outil lit les fichiers du jeu installés sur votre
   machine. Il ne télécharge jamais de contenu du jeu.
 - **Le résultat n'est pas destiné à être redistribué.** Gardez les `.glb` exportés, et les textures
   qu'ils contiennent, pour votre propre analyse. Ne publiez, ne partagez ni ne vendez les parcours,

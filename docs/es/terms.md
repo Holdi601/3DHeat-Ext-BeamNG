@@ -3,7 +3,7 @@ title: Condiciones y licencias
 nav_order: 9
 lang: "es"
 source: terms.md
-source_hash: "d94421d4d212"
+source_hash: "f80913a345e5"
 nav_exclude: true
 search_exclude: true
 ---
@@ -11,20 +11,24 @@ search_exclude: true
 
 ## El contenido de BeamNG {#beamngs-content}
 
-BeamNG.drive y sus niveles pertenecen a BeamNG GmbH, que no respalda este proyecto. Esta
-herramienta no incluye nada del juego ni descarga nada: lee los archivos de la copia que **tú**
-instalaste, en tu equipo, al margen del juego. No cambia nada en el juego ni se comunica
-con ningún servidor. Un recorrido que escribe es una derivada del nivel de BeamNG: es tuyo para
-analizar tus propias vueltas, no para compartirlo ni publicarlo. Usar la herramienta es
-decisión tuya, bajo las condiciones que aceptaste para el juego.
+BeamNG.drive y sus niveles pertenecen a BeamNG GmbH. 3DHeat BeamNG no está afiliado a BeamNG
+GmbH ni cuenta con su respaldo. BeamNG.drive y los nombres y marcas relacionados pertenecen a sus
+titulares.
 
-Por eso es un paquete aparte: si BeamNG alguna vez pide que se retire, se retira sola, y el
-visor, GameFiles y las demás herramientas se quedan.
+Esta herramienta no incluye nada del juego ni descarga nada: ni recursos del juego, ni código
+del juego, ni DLL. Lee los archivos de la copia que **tú** instalaste, en tu equipo, al margen
+del juego. No cambia nada en el juego ni se comunica con ningún servidor. Un recorrido que escribe se recorta
+del nivel de BeamNG y se queda en tu equipo, para analizar tus propias vueltas; no lo compartas
+ni lo publiques.
+
+Cada lector de juego es un pequeño proyecto propio, con su propio archivo de licencia, sus propias versiones y su propio gestor de incidencias, de modo que puede instalarse, actualizarse, mantenerse - o retirarse a petición de un titular de derechos - por separado, sin afectar al visor ni a las demás herramientas.
+
+Titulares de derechos: abran una incidencia en [github.com/Holdi601/3DHeat-Ext-BeamNG/issues](https://github.com/Holdi601/3DHeat-Ext-BeamNG/issues); respondemos rápido y retiramos lo que se nos pida.
 
 Las normas de 3DHeat GameFiles se aplican aquí sin cambios
 ([Normas y licencias](https://holdi601.github.io/3DHeat-GameFiles/rules-and-licences.html)):
 
-- **Tus archivos, tu responsabilidad.** La herramienta lee los archivos del juego
+- **Tus archivos.** La herramienta lee los archivos del juego
   instalados en tu equipo. Nunca descarga contenido del juego.
 - **La salida no es para redistribuir.** Guarda los `.glb` exportados, y las texturas
   que contienen, solo para tu propio análisis. No publiques, compartas ni vendas

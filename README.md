@@ -15,9 +15,12 @@ lap's own frame: it drops into the viewer's Race tab under the lap.
 command with step-by-step use and example output. Part of
 [3DHeat](https://github.com/Holdi601/3DHeat) ([documentation](https://holdi601.github.io/3DHeat/)).
 
-This tool is kept outside the 3DHeat tools on purpose: it reads BeamNG GmbH's
-game files. If it ever has to go, nothing else goes with it. The courses it
-writes stay on your machine.
+Each game reader is its own small project with its own licence file, releases
+and issue tracker, so it can be installed, updated, maintained - or withdrawn
+on a rights holder's request - on its own, without affecting the viewer or the
+other tools.
+
+The courses it writes stay on your machine.
 
 ## Install
 
@@ -90,11 +93,16 @@ and `water:water`. Load it in the viewer's **Background / level** panel with
 
 ## Terms
 
-BeamNG.drive and its levels belong to BeamNG GmbH, who do not endorse this
-project. Nothing of the game is in this repository or downloaded by it; the
-level comes out of your own install, and the course it writes is yours to
-analyse your laps on, not to share
+3DHeat BeamNG is not affiliated with or endorsed by BeamNG GmbH. BeamNG.drive
+and related names and trademarks belong to their owners. Nothing of the game is
+in this repository or downloaded by it - no game assets, no game code, no
+DLLs; the level comes out of your own install, and the course it writes stays
+on your machine
 ([Terms and licence](https://holdi601.github.io/3DHeat-Ext-BeamNG/terms.html)).
+
+Rights holders: open an issue at
+[github.com/Holdi601/3DHeat-Ext-BeamNG/issues](https://github.com/Holdi601/3DHeat-Ext-BeamNG/issues)
+- we respond quickly and remove anything on request.
 
 ## Tests
 

@@ -26,8 +26,7 @@ options:
   -h, --help            show this help message and exit
   --version             show program's version number and exit
 
-What you point it at is BeamNG GmbH's, under the game's own licence; the courses stay
-on your machine.
+It reads the files of your own install; the courses stay on your machine.
 ```
 
 ## `course`

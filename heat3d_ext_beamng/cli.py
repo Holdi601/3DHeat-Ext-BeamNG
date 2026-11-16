@@ -276,7 +276,7 @@ def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(
         prog=PROG,
         description="BeamNG.drive levels from your own install as 3DHeat courses",
-        epilog="What you point it at is BeamNG GmbH's, under the game's own licence; the courses stay on your machine.",
+        epilog="It reads the files of your own install; the courses stay on your machine.",
     )
     ap.add_argument("--version", action="version", version=__version__)
     sub = ap.add_subparsers(dest="verb", required=True)
