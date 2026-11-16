@@ -28,11 +28,10 @@ Formats de fichiers en détail : [Fichiers BeamNG](reader-beamng.md).
 
 ## Le repère du tour {#the-laps-frame}
 
-L'export `course` attend des positions BeamNG dans le **repère de la visionneuse** :
+L'export `course` attend des positions BeamNG dans le **repère du visualiseur** :
 `(x, z, -y)` du monde en Z vers le haut de BeamNG, en mètres. C'est la rotation qu'applique
 l'enregistreur de télémétrie 3DHeat. L'export ramène le tour dans le repère de BeamNG
-(`(x, -z, y)`), travaille dans ce repère, puis écrit tout de nouveau dans le repère de la
-visionneuse. C'est une rotation, pas un miroir : rien ne sort inversé. Un tour enregistré
+(`(x, -z, y)`), travaille dans ce repère, puis écrit tout de nouveau dans le repère du visualiseur. C'est une rotation, pas un miroir : rien ne sort inversé. Un tour enregistré
 dans le repère brut de BeamNG ne serait pas placé correctement. Ceci n'a pas été testé avec
 d'autres enregistreurs.
 
@@ -110,7 +109,7 @@ ordre du fichier), et disposées en rubans :
 | traces de pneus | `rubber`, `skid`, `tire_track`, `tyre_track`, `tread_mark` |
 | superposition (cosmétique) | `crack`, `patch`, `repair`, `damage`, `variation`, `edge`, `erosion`, `leaf`, `litter`, `gutter`, `grass`, `puddle`, `stain`, `oil`, `trace`, `bank`, `flow`, `leak` |
 | marquages | `line`, `marking`, `crossing`, `zebra`, `parking`, `arrow`, `stripe`, `checker`, `chevron` |
-| meuble | `dirt`, `gravel`, `mud`, `sand`, `snow`, `loose`, `dust`, `soil`, `clay`, `rally` |
+| sol meuble | `dirt`, `gravel`, `mud`, `sand`, `snow`, `loose`, `dust`, `soil`, `clay`, `rally` |
 | route | `asphalt`, `road`, `concrete`, `cobble`, `tarmac`, `pavement`, `street`, `paved`, `brick` |
 | superposition | tout le reste |
 
@@ -140,7 +139,7 @@ matériau :
 | marquages | `line`, `marking`, `zebra`, `arrow`, `stripe`, `crossing` dans le nom du matériau |
 | bordures | `rumble`, `kerb`, `curb` |
 | route | type de sol `asphalt*`, `concrete*`, `cobblestone`, `tarmac`, `street`, `paved*`, `brick*`, ou le nom contient `asphalt`, `tarmac`, `track_edge`, `road_surface` |
-| meuble | type de sol `dirt*`, `gravel*`, `sand*`, `mud*`, `snow*`, `soil*`, `clay*` |
+| sol meuble | type de sol `dirt*`, `gravel*`, `sand*`, `mud*`, `snow*`, `soil*`, `clay*` |
 | bas-côté | `sidewalk` |
 | (la catégorie propre du modèle) | pour les modèles déjà classés route, bordures ou bas-côtés |
 
@@ -196,7 +195,7 @@ pas de cache (mods). Une forme qu'on ne peut pas lire est comptée :
 **Textures.** Les modèles sont regroupés par catégorie et matériau en parties nommées
 `structure:<catégorie> <matériau>` (ou `ground:kerbs <matériau>`). Un groupe reçoit la
 texture de couleur de son matériau à **256 px** au plus seulement si ses UV restent entre 0
-et 1 (98 % des sommets entre -0,02 et 1,02). La visionneuse range les textures dans un atlas
+et 1 (98 % des sommets entre -0,02 et 1,02). Le visualiseur range les textures dans un atlas
 et ne peut pas en répéter une. Un groupe dont la texture se répète est dessiné dans la
 couleur moyenne de la texture (pondérée par l'alpha, en sRGB, multipliée par la teinte du
 matériau), ou dans la couleur de la catégorie s'il n'a pas de texture.

@@ -9,7 +9,7 @@ search_exclude: true
 ---
 # Fichiers BeamNG : archives de niveau, `.ter`, `.cdae`, `.dae` {#beamng-files-level-archives-ter-cdae-dae}
 
-BeamNG.drive livre des archives zip ordinaires : il n'y a donc aucun conteneur à rétro-ingénierer.
+BeamNG.drive livre des archives zip ordinaires : il n'y a donc aucun conteneur à rétro-concevoir.
 Le travail consiste à lire un niveau **comme le fait le jeu** : monter les archives dans un seul
 système de fichiers, suivre les fichiers de scène, et décoder le terrain et les formes compilées. Ces
 lecteurs sont atteints par l'export de parcours [BeamNG.drive](course-beamng.md). `identify` reconnaît
@@ -129,7 +129,7 @@ lu comme le fait l'importeur de Torque, dans la même structure :
 
 Vérifié contre le `.cdae` du jeu pour les mêmes fichiers : presque toutes les limites échantillonnées à 1 cm
 près, 583 avec le même nombre de triangles, 94 % des UV de matériaux identiques. Le test sur jeu installé exige
-que 90 % des 60 paires de formes au plus de l'archive d'art partagée concordent à 1 cm près.
+que 90 % d'au plus 60 paires de formes tirées de l'archive d'art partagée concordent à 1 cm près.
 
 ## Non lu {#not-read}
 

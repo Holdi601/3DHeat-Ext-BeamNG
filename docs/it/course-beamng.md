@@ -110,13 +110,13 @@ Di cosa è fatto un livello, ogni parte controllata sui livelli distribuiti
 - **Oggetti della foresta**: `levels\<nome>\forest\*.forest4.json`, tipizzati tramite
   i record di `managedItemData.json`. Barriere, recinzioni e rocce sono oggetti della
   foresta tanto spesso quanto lo sono gli alberi.
-- **Terreno**: il campo altimetrico `.ter` e la sua mappa di strati.
+- **Terreno**: la mappa delle altezze `.ter` e la sua mappa di strati.
 - **Materiali**: ogni `*.materials.json` fuori da `levels\`, più quelli di questo livello.
 
 ## Il corridoio e i decal delle strade {#the-corridor-and-the-road-decals}
 
 Il corridoio è `--margin` metri attorno al giro, nel piano x/y di BeamNG (vedi
-[Esportazione del percorso](https://holdi601.github.io/3DHeat-GameFiles/it/course-export.html#the-corridor)). Un corridoio di
+[Esportazione del percorso](https://holdi601.github.io/3DHeat-GameFiles/course-export.html#the-corridor)). Un corridoio di
 portata di `margin + 60 m` seleziona i candidati.
 
 **I decal stradali** (`DecalRoad`) sono dove si trova gran parte delle strade di
@@ -142,7 +142,7 @@ corridoio di portata vengono presi nell'ordine di disegno del gioco
 
 ## Il suolo {#the-ground}
 
-Il campo altimetrico del terreno dentro il corridoio diventa triangoli:
+La mappa delle altezze del terreno dentro il corridoio diventa triangoli:
 
 - Un quad per ogni quadrato del terreno il cui centro è nel corridoio. I quadrati con
   strato 255 (buchi) vengono saltati. Ogni quad sono due triangoli, con la diagonale
