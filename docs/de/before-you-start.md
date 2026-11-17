@@ -3,7 +3,7 @@ title: Bevor du anfängst
 nav_order: 1.5
 lang: "de"
 source: before-you-start.md
-source_hash: "97e80f09283e"
+source_hash: "76fbd24061dd"
 nav_exclude: true
 search_exclude: true
 ---
@@ -98,7 +98,7 @@ Weiter: [Streckenexport](course-beamng.md).
 |---|---|
 | `'python' is not recognized` | Python ist nicht installiert, oder das Kästchen PATH war nicht angehakt: Installiere es neu und hake es an (oder tippe `py` statt `python`). |
 | `'heat3d-beamng-maps' is not recognized` | Führe Schritt 4 im Ordner des Werkzeugs noch einmal aus, oder tippe `python -m heat3d_ext_beamng` statt `heat3d-beamng-maps`: Das tut dasselbe. |
-| `needs 3DHeat GameFiles: ...` | Schritt 4 hat GameFiles nicht installiert: Führe `python -m pip install git+https://github.com/Holdi601/3DHeat-GameFiles.git` aus, oder setze `HEAT3D_GAMEFILES` auf einen GameFiles-Ordner. |
+| `needs 3DHeat GameFiles: ...` | Schritt 4 hat GameFiles nicht installiert: Führe `python -m pip install https://github.com/Holdi601/3DHeat-GameFiles/archive/refs/tags/v1.1.0.zip` aus, oder setze `HEAT3D_GAMEFILES` auf einen GameFiles-Ordner. |
 | `no BeamNG.drive install found in the Steam libraries` | Gib den Ordner des Spiels an, also den, der `gameengine.zip` enthält: `--install "D:\Games\BeamNG.drive"`. |
 | `... is a forza-... lap, not a BeamNG.drive one` | Diese Runde stammt aus einem anderen Spiel; die Meldung nennt das Werkzeug dafür. |
 | `the lap does not lie on any installed level's terrain` | Nenne das Level: `--level <level folder>`, so wie `levels` es auflistet. |

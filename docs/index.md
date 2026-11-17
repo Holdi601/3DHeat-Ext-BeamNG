@@ -20,25 +20,37 @@ no placing or scaling.
 
 ## Quick start
 
-New to the command line? Read [Before you start](before-you-start.md) first.
-You need Python 3.10 or later, BeamNG.drive, a lap recorded in it, and
-[3DHeat GameFiles](https://holdi601.github.io/3DHeat-GameFiles/) (installed
-with this tool). Run these in the folder you cloned or unzipped:
+You need Windows, Python 3.10 or later ("Add python.exe to PATH" ticked in its
+installer), BeamNG.drive installed through Steam and a lap recorded with
+[3DHeat GameCapture](https://github.com/Holdi601/3DHeat-GameCapture) and its
+BeamNG mod; no Git. New to the command line? Read
+[Before you start](before-you-start.md) first.
 
 ```bash
-python -m pip install -e .                      # installs the heat3d-beamng-maps command
-heat3d-beamng-maps levels                       # where BeamNG.drive is, and its levels
-heat3d-beamng-maps course my_lap.json           # the course around that lap
+python -m pip install https://github.com/Holdi601/3DHeat-Ext-BeamNG/archive/refs/tags/v0.1.0.zip
+heat3d-beamng-maps levels                                  # where BeamNG.drive is, and its levels
+heat3d-beamng-maps course laps\<lap>.json -o my_lap.glb    # the course around that lap
 ```
 
-The lap comes from the 3DHeat GameCapture recorder and its BeamNG mod
+The install brings [3DHeat GameFiles](https://holdi601.github.io/3DHeat-GameFiles/),
+the library it reads with. The lap comes from
+`python -m heat3d_capture telemetry --game beamng --install` (once, it puts the
+mod into the game) and then `python -m heat3d_capture telemetry --game beamng -o laps`
 ([Telemetry: BeamNG.drive](https://holdi601.github.io/3DHeat-GameCapture/telemetry-beamng.html)).
 `course` finds the level from the lap and ends with
-`wrote my_lap.glb (... bytes)`. Load the `.glb` in the viewer's
-**Background / level** panel with **3D model…**.
+`wrote my_lap.glb (... bytes)`, after seconds to minutes; the file lands in the
+folder you ran it in. A game outside the Steam libraries needs
+`--install "<game folder>"` (the one holding `gameengine.zip`).
 
-The course is built from the game's files: it stays **on your machine**, to
-view, not to share or publish ([Terms](terms.md)).
+Then open the `.glb` in the [3DHeat viewer](https://github.com/Holdi601/3DHeat#quick-start):
+download it (**Code -> Download ZIP**, unpack), double-click `start.bat` (it
+offers to install Node.js when it is missing and opens `http://127.0.0.1:5273`),
+then **Background / level -> 3D model...** and pick the file, and in the
+**Race analysis** tab **Load lap files...** and pick the lap. The course stays
+on your machine.
+
+When a new release is out, the tool says so when it starts and offers to
+update itself.
 
 Each game reader is its own small project with its own licence file, releases
 and issue tracker, so it can be installed, updated, maintained - or withdrawn

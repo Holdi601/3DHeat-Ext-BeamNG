@@ -150,4 +150,4 @@ def test_without_gamefiles_one_line_and_exit_2(capsys, monkeypatch):
     code, out, err = run(capsys, "levels")
     assert code == 2 and out == ""
     assert err.strip() == "heat3d-beamng-maps: needs 3DHeat GameFiles: pip install " \
-        "git+https://github.com/Holdi601/3DHeat-GameFiles.git, or set HEAT3D_GAMEFILES to its folder"
+        "https://github.com/Holdi601/3DHeat-GameFiles/archive/refs/tags/v1.1.0.zip, or set HEAT3D_GAMEFILES to its folder"

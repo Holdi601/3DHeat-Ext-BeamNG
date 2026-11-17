@@ -22,7 +22,48 @@ other tools.
 
 The courses it writes stay on your machine.
 
-## Install
+## Quick start for new users
+
+You need: Windows, [Python](https://www.python.org/downloads/) 3.10 or later
+("Add python.exe to PATH" ticked in its installer), BeamNG.drive installed
+through Steam, and a lap recorded with
+[3DHeat GameCapture](https://github.com/Holdi601/3DHeat-GameCapture) and its
+BeamNG mod (`python -m heat3d_capture telemetry --game beamng --install` once,
+then `python -m heat3d_capture telemetry --game beamng -o laps`, see
+[Telemetry: BeamNG.drive](https://holdi601.github.io/3DHeat-GameCapture/telemetry-beamng.html)).
+No Git is needed.
+
+1. Install the tool (one line, in PowerShell or a command prompt); it brings
+   [3DHeat GameFiles](https://github.com/Holdi601/3DHeat-GameFiles), the
+   library it reads with:
+
+   ```bash
+   python -m pip install https://github.com/Holdi601/3DHeat-Ext-BeamNG/archive/refs/tags/v0.1.0.zip
+   ```
+
+2. Check that the game is found, then export the course around your lap (the
+   level is worked out from the lap; a game outside the Steam libraries needs
+   `--install "<game folder>"`, the one holding `gameengine.zip`):
+
+   ```bash
+   heat3d-beamng-maps levels
+   heat3d-beamng-maps course laps\<lap>.json -o my_lap.glb
+   ```
+
+3. The output is `my_lap.glb` in the folder you ran it in (without `-o`, it is
+   named after the lap). `course` ends with `wrote my_lap.glb (... bytes)`; a
+   level takes seconds to minutes.
+4. Open it in the [3DHeat viewer](https://github.com/Holdi601/3DHeat#quick-start):
+   download the viewer (**Code -> Download ZIP**, unpack) and double-click
+   `start.bat`; it offers to install [Node.js](https://nodejs.org/) when it is
+   missing and opens Chrome or Edge at `http://127.0.0.1:5273`. There,
+   **Background / level -> 3D model...** and pick the `.glb`, then the
+   **Race analysis** tab, **Load lap files...** and pick the lap.
+
+When a new release is out, the tool says so when it starts and offers to
+update itself (`python -m heat3d_ext_beamng.update` does the same).
+
+## Install from a checkout
 
 New to the command line? Read [Before you start](https://holdi601.github.io/3DHeat-Ext-BeamNG/before-you-start.html) first.
 

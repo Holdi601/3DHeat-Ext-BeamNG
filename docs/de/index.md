@@ -3,7 +3,7 @@ title: Startseite
 nav_order: 1
 lang: "de"
 source: index.md
-source_hash: "fa2c58a5b149"
+source_hash: "df0900af4416"
 nav_exclude: true
 search_exclude: true
 permalink: /de/
@@ -24,25 +24,37 @@ die Runde: Die Datei passt im Rennanalyse-Tab des Viewers unter die Runde, ohne 
 
 ## Schnellstart {#quick-start}
 
-Neu bei der Kommandozeile? Lies zuerst [Bevor du anfängst](before-you-start.md).
-Du brauchst Python 3.10 oder neuer, BeamNG.drive, eine darin aufgenommene Runde und
-[3DHeat GameFiles](https://holdi601.github.io/3DHeat-GameFiles/) (wird mit diesem Werkzeug installiert).
-Führe diese Befehle in dem Ordner aus, den du geklont oder entpackt hast:
+Du brauchst Windows, Python 3.10 oder neuer (im Installer "Add python.exe to PATH"
+ankreuzen), BeamNG.drive über Steam installiert und eine mit
+[3DHeat GameCapture](https://github.com/Holdi601/3DHeat-GameCapture) und seinem
+BeamNG-Mod aufgenommene Runde; Git ist nicht nötig. Neu bei der Kommandozeile?
+Lies zuerst [Bevor du anfängst](before-you-start.md).
 
 ```bash
-python -m pip install -e .                      # installs the heat3d-beamng-maps command
-heat3d-beamng-maps levels                       # where BeamNG.drive is, and its levels
-heat3d-beamng-maps course my_lap.json           # the course around that lap
+python -m pip install https://github.com/Holdi601/3DHeat-Ext-BeamNG/archive/refs/tags/v0.1.0.zip
+heat3d-beamng-maps levels                                  # wo BeamNG.drive liegt, und seine Levels
+heat3d-beamng-maps course laps\<lap>.json -o my_lap.glb    # die Strecke um diese Runde
 ```
 
-Die Runde stammt vom 3DHeat-GameCapture-Recorder und seinem BeamNG-Mod
+Die Installation bringt [3DHeat GameFiles](https://holdi601.github.io/3DHeat-GameFiles/)
+mit, die Bibliothek, mit der es liest. Die Runde kommt von
+`python -m heat3d_capture telemetry --game beamng --install` (einmal, es legt den
+Mod ins Spiel) und dann `python -m heat3d_capture telemetry --game beamng -o laps`
 ([Telemetrie: BeamNG.drive](https://holdi601.github.io/3DHeat-GameCapture/telemetry-beamng.html)).
-`course` findet das Level anhand der Runde und endet mit
-`wrote my_lap.glb (... bytes)`. Lade die `.glb`-Datei im Viewer im Panel **Hintergrund / Level**
-mit **3D-Modell…**.
+`course` findet das Level anhand der Runde und endet nach Sekunden bis Minuten mit
+`wrote my_lap.glb (... bytes)`; die Datei landet in dem Ordner, in dem du den Befehl
+ausgeführt hast. Liegt das Spiel in keiner Steam-Bibliothek, nenne seinen Ordner mit
+`--install "<Spielordner>"` (den mit `gameengine.zip`).
 
-Die Strecke wird aus den Dateien des Spiels gebaut. Sie bleibt **auf deinem Rechner**, zum
-Anschauen, nicht zum Teilen oder Veröffentlichen ([Bedingungen](terms.md)).
+Dann öffne die `.glb` im [3DHeat-Viewer](https://github.com/Holdi601/3DHeat#quick-start):
+herunterladen (**Code -> Download ZIP**, entpacken), `start.bat` doppelklicken (es bietet
+an, Node.js zu installieren, wenn es fehlt, und öffnet `http://127.0.0.1:5273`), dann
+**Hintergrund / Level -> 3D-Modell...** und die Datei wählen, und im Tab
+**Rennanalyse** mit **Rundendateien laden...** die Runde wählen. Die Strecke bleibt
+auf deinem Rechner.
+
+Wenn ein neues Release erscheint, sagt das Werkzeug es beim Start und bietet an, sich
+selbst zu aktualisieren.
 
 Jeder Spiele-Leser ist ein eigenes kleines Projekt mit eigener Lizenzdatei, eigenen Releases und eigenem Issue-Tracker. So lässt er sich für sich allein installieren, aktualisieren und pflegen - oder auf Wunsch eines Rechteinhabers zurückziehen -, ohne dass der Viewer oder die anderen Werkzeuge davon berührt werden.
 

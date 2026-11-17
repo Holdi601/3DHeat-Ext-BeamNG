@@ -11,6 +11,8 @@
   levels; `identify` names a `.cdae` shape, a `.ter` terrain or a level zip.
   Builds on 3DHeat GameFiles as a library, installed by pip or found beside a
   checkout.
+- Installs with one pip line from the release zip, no Git needed (GameFiles comes from its own release zip); a pip install knows its version and updates itself with pip when a newer release is out.
+- README: a quick start for new users.
 
 ## Docs
 

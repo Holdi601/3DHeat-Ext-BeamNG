@@ -95,7 +95,7 @@ Next: [Course export](course-beamng.md).
 |---|---|
 | `'python' is not recognized` | Python is not installed, or the PATH box was not ticked: install it again and tick it (or type `py` instead of `python`). |
 | `'heat3d-beamng-maps' is not recognized` | Run step 4 again in the tool's folder, or type `python -m heat3d_ext_beamng` instead of `heat3d-beamng-maps`: it does the same. |
-| `needs 3DHeat GameFiles: ...` | Step 4 did not install GameFiles: run `python -m pip install git+https://github.com/Holdi601/3DHeat-GameFiles.git`, or set `HEAT3D_GAMEFILES` to a GameFiles folder. |
+| `needs 3DHeat GameFiles: ...` | Step 4 did not install GameFiles: run `python -m pip install https://github.com/Holdi601/3DHeat-GameFiles/archive/refs/tags/v1.1.0.zip`, or set `HEAT3D_GAMEFILES` to a GameFiles folder. |
 | `no BeamNG.drive install found in the Steam libraries` | Give the game's folder, the one holding `gameengine.zip`: `--install "D:\Games\BeamNG.drive"`. |
 | `... is a forza-... lap, not a BeamNG.drive one` | That lap is from another game; the message names the tool for it. |
 | `the lap does not lie on any installed level's terrain` | Name the level: `--level <level folder>`, as `levels` lists it. |
