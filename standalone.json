@@ -1,0 +1,8 @@
+{
+  "spec": "heat3d_ext_beamng.standalone_spec",
+  "collect_submodules": ["numpy", "heat3d_gamefiles", "PIL", "lz4", "msgpack", "zstandard"],
+  "platforms": {
+    "windows-x64": {"build": true, "tested": false, "note": "courses around a recorded lap; CI builds and smoke-runs, not yet checked on a real install"},
+    "linux-x64": {"build": true, "tested": false, "note": "native Linux and Steam/Proton installs found (Steam Deck included); CI builds and smoke-runs"}
+  }
+}

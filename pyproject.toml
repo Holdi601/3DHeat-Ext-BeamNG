@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "heat3d-ext-beamng"
-version = "0.1.0"
+version = "0.2.0"
 description = "BeamNG.drive levels from your own install as 3DHeat courses: the ground, roads, placed models and water around a recorded lap"
 readme = "README.md"
 license = { file = "LICENSE" }
@@ -24,4 +24,4 @@ test = ["pytest>=8.0"]
 heat3d-beamng-maps = "heat3d_ext_beamng.cli:main"
 
 [tool.setuptools]
-packages = ["heat3d_ext_beamng"]
+packages = ["heat3d_ext_beamng", "heat3d_ext_beamng.app"]

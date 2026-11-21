@@ -22,6 +22,17 @@ other tools.
 
 The courses it writes stay on your machine.
 
+## The standalone program
+
+No Python needed: download the file for your system (Windows, Linux incl. Steam Deck) from the
+[latest release](https://github.com/Holdi601/3DHeat-Ext-BeamNG/releases/latest), check it against
+`SHA256SUMS`, unpack it and start `heat3d-beamng`. Its window finds your install, says what is missing,
+exports the course around a lap you pick into the 3DHeat levels folder, lists the levels, and asks before
+it updates itself. `heat3d-beamng --help` lists its commands (every command below runs through it too:
+`heat3d-beamng heat3d-beamng-maps course my_lap.json`); `--check --json` and `status --json` are for
+scripts. The 3DHeat app's Extractors panel can install and update it for you. See
+[Before you start](https://holdi601.github.io/3DHeat-Ext-BeamNG/before-you-start.html).
+
 ## Quick start for new users
 
 You need: Windows, [Python](https://www.python.org/downloads/) 3.10 or later

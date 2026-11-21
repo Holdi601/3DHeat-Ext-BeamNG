@@ -75,6 +75,10 @@ def find_install(extra: tuple[str | Path, ...] = (), *, defaults: bool = True) -
 
         for library in steam_libraries():
             candidates.append(Path(library) / "steamapps" / "common" / GAME_FOLDER)
+        # Every Steam library on any system: Linux native and flatpak (Steam Deck, Proton) too.
+        from .app.paths import steam_game_dirs
+
+        candidates += steam_game_dirs(GAME_FOLDER)
     for folder in candidates:
         if (folder / "gameengine.zip").exists() and (folder / "content").is_dir():
             return folder
@@ -83,11 +87,22 @@ def find_install(extra: tuple[str | Path, ...] = (), *, defaults: bool = True) -
 
 def user_folders() -> list[Path]:
     """Where BeamNG keeps the user's own content, newest layout first."""
-    local = os.environ.get("LOCALAPPDATA")
     found: list[Path] = []
-    if not local:
-        return found
-    for base in (Path(local) / "BeamNG" / "BeamNG.drive", Path(local) / "BeamNG.drive"):
+    locals_: list[Path] = []
+    if os.environ.get("LOCALAPPDATA"):
+        locals_.append(Path(os.environ["LOCALAPPDATA"]))
+    if os.name != "nt":
+        # The native Linux build keeps it in the XDG data folder; under Proton
+        # it sits in the game's prefix, as on Windows.
+        from .app import paths
+
+        locals_.append(Path(os.environ.get("XDG_DATA_HOME") or Path.home() / ".local" / "share"))
+        for game in paths.steam_game_dirs(GAME_FOLDER):
+            local = paths.proton_user_dir(game, "AppData", "Local")
+            if local is not None:
+                locals_.append(local)
+    bases = [b for local in locals_ for b in (local / "BeamNG" / "BeamNG.drive", local / "BeamNG.drive")]
+    for base in bases:
         if not base.is_dir():
             continue
         current = base / "current"

@@ -8,6 +8,34 @@ nav_order: 1.5
 New to the command line? This page takes you from nothing to a first run.
 It takes about fifteen minutes, once.
 
+## The standalone program (no Python needed)
+
+Each [release](https://github.com/Holdi601/3DHeat-Ext-BeamNG/releases/latest)
+has a ready-to-run program for Windows (`heat3d-beamng-<version>-windows-x64.zip`)
+and Linux (`heat3d-beamng-<version>-linux-x64.tar.gz`, for the native Linux game and
+a Steam/Proton install, Steam Deck included), with a `SHA256SUMS` file to check
+the download. Unpack it anywhere and start `heat3d-beamng`; steps 1 to 4 below
+are then not needed.
+
+Started without arguments it opens a window that:
+
+- finds your BeamNG.drive install in any Steam library, or lets you choose its
+  folder;
+- says what is missing: the game, free disk space;
+- exports the course around a lap you pick into the 3DHeat levels folder
+  (`HEAT3D_LEVELS`, by default `%LOCALAPPDATA%\3DHeat\levels` on Windows and
+  `~/.local/share/3dheat/levels` on Linux), where the viewer finds it, and
+  lists the levels the game has, mods included;
+- checks for updates and asks before installing one, unless you tick
+  *Update automatically*.
+
+The same program runs every command on these pages:
+`heat3d-beamng heat3d-beamng-maps course my_lap.json`, `heat3d-beamng levels`.
+For scripts: `heat3d-beamng --check --json` reports what is found and missing,
+and `heat3d-beamng status --json` the install's state. A course is cut around a
+lap, so there is nothing to extract from the install alone: `heat3d-beamng extract --new`
+says so. The 3DHeat app's Extractors panel installs, updates and starts it for you.
+
 ## 1. Install Python
 
 This tool needs **Python 3.10 or later**.
