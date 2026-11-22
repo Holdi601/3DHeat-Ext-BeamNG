@@ -36,6 +36,8 @@ and `heat3d-beamng status --json` the install's state. A course is cut around a
 lap, so there is nothing to extract from the install alone: `heat3d-beamng extract --new`
 says so. The 3DHeat app's Extractors panel installs, updates and starts it for you.
 
+The window walks through four steps (find the game, choose, work, done) in the 3DHeat look, dark or light. On Windows the program opens only its window, with no console window; in a terminal it prints as usual, and `heat3d-beamng-cli.cmd` in the same folder makes the terminal wait for it and pass on its exit code.
+
 ## 1. Install Python
 
 This tool needs **Python 3.10 or later**.

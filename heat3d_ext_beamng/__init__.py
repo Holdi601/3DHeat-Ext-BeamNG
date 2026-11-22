@@ -2,7 +2,7 @@
 
 from ._gamefiles import find_gamefiles as _find_gamefiles
 
-__version__ = "0.2.0"
+__version__ = "0.3.0"
 
 # The readers import 3DHeat GameFiles; from a plain checkout it has to be found first.
 _find_gamefiles()

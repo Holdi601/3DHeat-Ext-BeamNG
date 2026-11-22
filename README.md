@@ -33,6 +33,8 @@ it updates itself. `heat3d-beamng --help` lists its commands (every command belo
 scripts. The 3DHeat app's Extractors panel can install and update it for you. See
 [Before you start](https://holdi601.github.io/3DHeat-Ext-BeamNG/before-you-start.html).
 
+The window walks through four steps (find the game, choose, work, done) in the 3DHeat look, dark or light. On Windows the program opens only its window, with no console window; in a terminal it prints as usual, and `heat3d-beamng-cli.cmd` in the same folder makes the terminal wait for it and pass on its exit code.
+
 ## Quick start for new users
 
 You need: Windows, [Python](https://www.python.org/downloads/) 3.10 or later

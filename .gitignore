@@ -30,3 +30,7 @@ laps/
 *.jsonl
 *.log
 dist-standalone/
+# the window's own images (logo, icons): ours, not game data
+!*/app/assets/*.png
+!docs/assets/tool-64.png
+!docs/assets/favicon.ico
