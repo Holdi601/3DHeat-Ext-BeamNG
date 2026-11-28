@@ -1,0 +1,64 @@
+{
+  "format": "3dheat-plugin",
+  "version": 1,
+  "id": "beamng",
+  "name": "BeamNG.drive",
+  "kind": "game",
+  "what": "Levels from your install as courses, and your drives from the game's telemetry",
+  "games": [
+    {
+      "id": "beamng",
+      "name": "BeamNG.drive"
+    }
+  ],
+  "platforms": [
+    "windows-x64",
+    "linux-x64"
+  ],
+  "icon": "icon-64.png",
+  "programs": [
+    {
+      "id": "heat3d-beamng",
+      "repo": "Holdi601/3DHeat-Ext-BeamNG",
+      "verbs": {
+        "check": [
+          "--check",
+          "--json"
+        ],
+        "status": [
+          "status",
+          "--json"
+        ]
+      }
+    }
+  ],
+  "companions": [
+    "heat3d-gamecapture"
+  ],
+  "capabilities": {
+    "maps": {
+      "program": "heat3d-beamng",
+      "manual": true
+    },
+    "replays": {
+      "program": "heat3d-gamecapture",
+      "live": true
+    }
+  },
+  "requirements": [
+    {
+      "id": "game",
+      "label": "The game installed on this computer",
+      "auto": false
+    }
+  ],
+  "detect": {
+    "steam": [
+      "BeamNG.drive"
+    ],
+    "processes": [
+      "BeamNG.drive.x64.exe",
+      "BeamNG.drive.x64"
+    ]
+  }
+}
